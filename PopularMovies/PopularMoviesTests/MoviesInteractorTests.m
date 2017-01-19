@@ -82,4 +82,15 @@ it (@"should have correct movie. ", ^{
     
 });
 
+it (@"should have nil movie. ", ^{
+    
+    MoviesInteractor *moviesInteractor = [MoviesInteractor new];
+    moviesInteractor.movies = movies;
+    
+    MovieModel *movie = [moviesInteractor movieAtIndexPath:[NSIndexPath indexPathForRow:4 inSection:0]];
+    
+    expect( movie ).to.beNil;
+    
+});
+
 SpecEnd
