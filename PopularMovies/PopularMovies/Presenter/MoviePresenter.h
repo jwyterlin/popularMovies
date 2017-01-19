@@ -15,11 +15,10 @@
 
 -(instancetype)initWithMovie:(MovieModel *)movie;
 
-@property (nonatomic, readonly) MovieModel *movie;
-
-@property (nonatomic, readonly) NSString *titleText;
-@property (nonatomic, readonly) NSString *yearText;
-@property (nonatomic, readonly) NSString *overviewText;
-@property (nonatomic, readonly) UIImage *pictureImage;
+-(NSString *)titleText;
+-(NSString *)yearText;
+-(NSString *)overviewText;
+-(UIImage *)pictureImage;
+-(NSString *)titleYearText;
 
 @end
