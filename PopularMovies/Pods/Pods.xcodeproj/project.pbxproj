@@ -1,0 +1,681 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0CDDCF64EFA03BC32FC48454264B2C12 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32DF21EF8268E32D359CD23F2CF3EFE3 /* Foundation.framework */; };
+		0F5F4563D8E11AE1A4E285ACA4243E16 /* SpectaDSL.h in Headers */ = {isa = PBXBuildFile; fileRef = 130508B11300AEFE1F617D73FB4D906E /* SpectaDSL.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1189982DD84F8AE1936F039FD78B3FB6 /* Specta.h in Headers */ = {isa = PBXBuildFile; fileRef = 5D9F9F958C366DCAFB711AFE29E4F26D /* Specta.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		172BFA7AB620AFA1C2C60345CC9E686B /* SPTSharedExampleGroups.m in Sources */ = {isa = PBXBuildFile; fileRef = E3BCF07DD24077A4DAE6B620BC3C4F38 /* SPTSharedExampleGroups.m */; };
+		196A784C055C3FE8DF8CAC088F4CDD94 /* SPTCompiledExample.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E6DB3B97C44AF6FF6C2E85C962A4931 /* SPTCompiledExample.m */; };
+		19C25F6010040731E0E28B939A7AD4C8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32DF21EF8268E32D359CD23F2CF3EFE3 /* Foundation.framework */; };
+		2B933FB6389E3CDC56C59C79310F938E /* XCTestCase+Specta.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E72E7AC1FE8348341697D4E8BA5F02 /* XCTestCase+Specta.m */; };
+		3A2CD051111539100AB5CE72E5B4E99F /* SPTTestSuite.m in Sources */ = {isa = PBXBuildFile; fileRef = 90FC643302D6BF385AC4469CFCE9BEC7 /* SPTTestSuite.m */; };
+		3ED2C7E53C08A9280D821225BEE50E51 /* SPTGlobalBeforeAfterEach.h in Headers */ = {isa = PBXBuildFile; fileRef = 367762465332438C28A71EE9D1C9D2D5 /* SPTGlobalBeforeAfterEach.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4AC1AB7C03AAD86D22C4C05FBFC26708 /* Pods-PopularMovies-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E7B2CEB1DD7AA90ED62B5565F9B52151 /* Pods-PopularMovies-dummy.m */; };
+		4DF221E381A4369D5834DFD1868A8092 /* SpectaUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D534867F50009274DDA198E64561CFD /* SpectaUtility.m */; };
+		4F61F16B62EE4E596EBE86D915282CCD /* SpectaTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = CBFF61AFC3F462DB4EEA87E4F5859E2F /* SpectaTypes.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		537D57A60623287D9235A44AA9EC45B2 /* SPTCallSite.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AC36382B9EB0A3EAF6E62180680A5CD /* SPTCallSite.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5CC0F39E98FB496B3CD53FDDD454052D /* SPTSharedExampleGroups.h in Headers */ = {isa = PBXBuildFile; fileRef = B4AF9967BA3F073D4FF4B3EDE19F98EF /* SPTSharedExampleGroups.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		622A46E71227820686D39B5BB6410544 /* SPTExampleGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 627F129629E99D8F721AA65ACF8AAA86 /* SPTExampleGroup.m */; };
+		7A8C7BA72A8105F3CA29412CFC5F0BE6 /* XCTestCase+Specta.h in Headers */ = {isa = PBXBuildFile; fileRef = 9654F5EDC9BD129C44719E156D334BE7 /* XCTestCase+Specta.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		81042712CEF93CE6224E2AD8E91A09CC /* SPTCallSite.m in Sources */ = {isa = PBXBuildFile; fileRef = 383F30A2468543313F7070B44523AC68 /* SPTCallSite.m */; };
+		8875BFF8BD4918AF926BE09B349A8F49 /* SPTCompiledExample.h in Headers */ = {isa = PBXBuildFile; fileRef = 20D0DD2670F008C71D419224F4983730 /* SPTCompiledExample.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		88C0C3BE9D686A750C6AA956A0A17E52 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32DF21EF8268E32D359CD23F2CF3EFE3 /* Foundation.framework */; };
+		9BEFD916C5CDB17F8702CA4205AACA6C /* SPTExample.m in Sources */ = {isa = PBXBuildFile; fileRef = D25C906DB8F724A95C033DCF495DA6B5 /* SPTExample.m */; };
+		A2A44E44D2F4BB91D3894A186C17135F /* Pods-PopularMoviesTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EE80776A09EE692E9C83060FFE5322DF /* Pods-PopularMoviesTests-dummy.m */; };
+		A4AFA6812591DC446E2B32C0ED077327 /* SPTSpec.h in Headers */ = {isa = PBXBuildFile; fileRef = 409A8DF0AF79F0A733A19C8CC4E47B2D /* SPTSpec.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AA93E03C3BAEDB26ACE2F6040A2A0118 /* SPTExcludeGlobalBeforeAfterEach.h in Headers */ = {isa = PBXBuildFile; fileRef = 4D5B81F9CCA50FE33E30B1BDDB0795E1 /* SPTExcludeGlobalBeforeAfterEach.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B2A3A76CC1299E5026012B4DED463FFC /* SPTTestSuite.h in Headers */ = {isa = PBXBuildFile; fileRef = 0AD1B118C4265C103775F934E448F2D2 /* SPTTestSuite.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BAC7D75ABFE2F797456FC05C919BFD30 /* SPTExample.h in Headers */ = {isa = PBXBuildFile; fileRef = B83BA28AE5F2F19A6E5FF588AD12D1AF /* SPTExample.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BE2B18D2CD428E7F88E32F403C023D53 /* Specta-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 06F957306599B95ADFE6CB0CC46A65FC /* Specta-dummy.m */; };
+		C0B06A66C7DBD7AA5BE1EFB25B7FED4B /* SpectaUtility.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D42BBDB0F6D514B0A7C09DE4B90ED6F /* SpectaUtility.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C546A1A2E63FA503EAF1736F052C492F /* SPTSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C7726BFF30A89593F60985A1FD7CEA3 /* SPTSpec.m */; };
+		D6A9188338BE311BEF9EFDD314AE8660 /* SpectaDSL.m in Sources */ = {isa = PBXBuildFile; fileRef = F12C3427499E0E64912DC8F1C008EA51 /* SpectaDSL.m */; };
+		E021953440B5DA19B2F1EF2C2BB2635B /* SPTExampleGroup.h in Headers */ = {isa = PBXBuildFile; fileRef = 16A6DCD96BB12A00B56E137E05885870 /* SPTExampleGroup.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ED0D93BC3FF6478BFEBDC841EDDE041C /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AECEA2EDA41473899EE391CA038EDC38 /* XCTest.framework */; };
+		FF507A5FE92B7FCE799A6904227CCF5C /* XCTest+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = DAFFE69EB998DC0834AE85175FFEEF7C /* XCTest+Private.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A65C1456E5AC44B1B67CCFEF45550FD4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 416DE7E960E3843061E36C676273B5FD;
+			remoteInfo = Specta;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		00E72E7AC1FE8348341697D4E8BA5F02 /* XCTestCase+Specta.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "XCTestCase+Specta.m"; path = "Specta/Specta/XCTestCase+Specta.m"; sourceTree = "<group>"; };
+		02BD838DB0E188B876F0390EEF7A04F5 /* Pods-PopularMovies-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PopularMovies-resources.sh"; sourceTree = "<group>"; };
+		048AADAB2A2B6ED15E05BDFC80649ACE /* Pods-PopularMoviesTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PopularMoviesTests.release.xcconfig"; sourceTree = "<group>"; };
+		06F957306599B95ADFE6CB0CC46A65FC /* Specta-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Specta-dummy.m"; sourceTree = "<group>"; };
+		09F864200F0C7440D3C73841C07F4C3A /* Specta.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Specta.xcconfig; sourceTree = "<group>"; };
+		0AD1B118C4265C103775F934E448F2D2 /* SPTTestSuite.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SPTTestSuite.h; path = Specta/Specta/SPTTestSuite.h; sourceTree = "<group>"; };
+		130508B11300AEFE1F617D73FB4D906E /* SpectaDSL.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SpectaDSL.h; path = Specta/Specta/SpectaDSL.h; sourceTree = "<group>"; };
+		16A6DCD96BB12A00B56E137E05885870 /* SPTExampleGroup.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SPTExampleGroup.h; path = Specta/Specta/SPTExampleGroup.h; sourceTree = "<group>"; };
+		1AC36382B9EB0A3EAF6E62180680A5CD /* SPTCallSite.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SPTCallSite.h; path = Specta/Specta/SPTCallSite.h; sourceTree = "<group>"; };
+		1D42BBDB0F6D514B0A7C09DE4B90ED6F /* SpectaUtility.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SpectaUtility.h; path = Specta/Specta/SpectaUtility.h; sourceTree = "<group>"; };
+		20D0DD2670F008C71D419224F4983730 /* SPTCompiledExample.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SPTCompiledExample.h; path = Specta/Specta/SPTCompiledExample.h; sourceTree = "<group>"; };
+		2D75F4B8CCBAEC2C8C70465E979E2378 /* Pods-PopularMoviesTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PopularMoviesTests-frameworks.sh"; sourceTree = "<group>"; };
+		32DF21EF8268E32D359CD23F2CF3EFE3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		367762465332438C28A71EE9D1C9D2D5 /* SPTGlobalBeforeAfterEach.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SPTGlobalBeforeAfterEach.h; path = Specta/Specta/SPTGlobalBeforeAfterEach.h; sourceTree = "<group>"; };
+		383F30A2468543313F7070B44523AC68 /* SPTCallSite.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SPTCallSite.m; path = Specta/Specta/SPTCallSite.m; sourceTree = "<group>"; };
+		409A8DF0AF79F0A733A19C8CC4E47B2D /* SPTSpec.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SPTSpec.h; path = Specta/Specta/SPTSpec.h; sourceTree = "<group>"; };
+		470DDCA495F11680497322F4479E6FEC /* libPods-PopularMoviesTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-PopularMoviesTests.a"; path = "libPods-PopularMoviesTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		49812195F0348429017DF292F6C867B3 /* Pods-PopularMovies.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PopularMovies.debug.xcconfig"; sourceTree = "<group>"; };
+		4D5B81F9CCA50FE33E30B1BDDB0795E1 /* SPTExcludeGlobalBeforeAfterEach.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SPTExcludeGlobalBeforeAfterEach.h; path = Specta/Specta/SPTExcludeGlobalBeforeAfterEach.h; sourceTree = "<group>"; };
+		4E6DB3B97C44AF6FF6C2E85C962A4931 /* SPTCompiledExample.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SPTCompiledExample.m; path = Specta/Specta/SPTCompiledExample.m; sourceTree = "<group>"; };
+		5D9F9F958C366DCAFB711AFE29E4F26D /* Specta.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Specta.h; path = Specta/Specta/Specta.h; sourceTree = "<group>"; };
+		627F129629E99D8F721AA65ACF8AAA86 /* SPTExampleGroup.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SPTExampleGroup.m; path = Specta/Specta/SPTExampleGroup.m; sourceTree = "<group>"; };
+		6BA573FF1BDAED359272CCDB80B760AC /* Pods-PopularMovies-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-PopularMovies-acknowledgements.markdown"; sourceTree = "<group>"; };
+		8546BBE6C3C3597E9D4E2211B09AE7E3 /* Pods-PopularMoviesTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PopularMoviesTests.debug.xcconfig"; sourceTree = "<group>"; };
+		8D534867F50009274DDA198E64561CFD /* SpectaUtility.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SpectaUtility.m; path = Specta/Specta/SpectaUtility.m; sourceTree = "<group>"; };
+		90FC643302D6BF385AC4469CFCE9BEC7 /* SPTTestSuite.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SPTTestSuite.m; path = Specta/Specta/SPTTestSuite.m; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9654F5EDC9BD129C44719E156D334BE7 /* XCTestCase+Specta.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "XCTestCase+Specta.h"; path = "Specta/Specta/XCTestCase+Specta.h"; sourceTree = "<group>"; };
+		9C7726BFF30A89593F60985A1FD7CEA3 /* SPTSpec.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SPTSpec.m; path = Specta/Specta/SPTSpec.m; sourceTree = "<group>"; };
+		9F42C3216DEC17620FC4F37B990B51C5 /* Pods-PopularMovies-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PopularMovies-frameworks.sh"; sourceTree = "<group>"; };
+		AECEA2EDA41473899EE391CA038EDC38 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		B4AF9967BA3F073D4FF4B3EDE19F98EF /* SPTSharedExampleGroups.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SPTSharedExampleGroups.h; path = Specta/Specta/SPTSharedExampleGroups.h; sourceTree = "<group>"; };
+		B83BA28AE5F2F19A6E5FF588AD12D1AF /* SPTExample.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SPTExample.h; path = Specta/Specta/SPTExample.h; sourceTree = "<group>"; };
+		C0C80D0E688153874F9656A28467D1C4 /* Specta-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Specta-prefix.pch"; sourceTree = "<group>"; };
+		CBFF61AFC3F462DB4EEA87E4F5859E2F /* SpectaTypes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SpectaTypes.h; path = Specta/Specta/SpectaTypes.h; sourceTree = "<group>"; };
+		CD5EF31AADA52AAF26F49D01BE05622D /* Pods-PopularMovies-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-PopularMovies-acknowledgements.plist"; sourceTree = "<group>"; };
+		D25C906DB8F724A95C033DCF495DA6B5 /* SPTExample.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SPTExample.m; path = Specta/Specta/SPTExample.m; sourceTree = "<group>"; };
+		DAFFE69EB998DC0834AE85175FFEEF7C /* XCTest+Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "XCTest+Private.h"; path = "Specta/Specta/XCTest+Private.h"; sourceTree = "<group>"; };
+		E04EBCACF6AD77CF0F206093DF1216D5 /* Pods-PopularMoviesTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PopularMoviesTests-resources.sh"; sourceTree = "<group>"; };
+		E0868F9EEDAFF69410C89090C4BF4D29 /* Pods-PopularMoviesTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-PopularMoviesTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		E3BCF07DD24077A4DAE6B620BC3C4F38 /* SPTSharedExampleGroups.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SPTSharedExampleGroups.m; path = Specta/Specta/SPTSharedExampleGroups.m; sourceTree = "<group>"; };
+		E7B2CEB1DD7AA90ED62B5565F9B52151 /* Pods-PopularMovies-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-PopularMovies-dummy.m"; sourceTree = "<group>"; };
+		EE80776A09EE692E9C83060FFE5322DF /* Pods-PopularMoviesTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-PopularMoviesTests-dummy.m"; sourceTree = "<group>"; };
+		F12C3427499E0E64912DC8F1C008EA51 /* SpectaDSL.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SpectaDSL.m; path = Specta/Specta/SpectaDSL.m; sourceTree = "<group>"; };
+		F2DC89697B14CB54C1FEB2FCC2FED67F /* Pods-PopularMoviesTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-PopularMoviesTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		F71F6109430D450565BA9AFE065D4F48 /* Pods-PopularMovies.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PopularMovies.release.xcconfig"; sourceTree = "<group>"; };
+		FAB2D78D0759F14EA80E2B520AD327EE /* libPods-PopularMovies.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-PopularMovies.a"; path = "libPods-PopularMovies.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FE99A5CFD823AE10837C08AD9C680F80 /* libSpecta.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libSpecta.a; path = libSpecta.a; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0E2823569A32036D69E6FB5B16573C32 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				88C0C3BE9D686A750C6AA956A0A17E52 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1D39F741054CF48F372468E8E8A1F9DE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				19C25F6010040731E0E28B939A7AD4C8 /* Foundation.framework in Frameworks */,
+				ED0D93BC3FF6478BFEBDC841EDDE041C /* XCTest.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DCF8BC3030559C7D8A946A1B52895F34 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0CDDCF64EFA03BC32FC48454264B2C12 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0E62FF23167B1C84C6A6D40F45908AD5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FAB2D78D0759F14EA80E2B520AD327EE /* libPods-PopularMovies.a */,
+				470DDCA495F11680497322F4479E6FEC /* libPods-PopularMoviesTests.a */,
+				FE99A5CFD823AE10837C08AD9C680F80 /* libSpecta.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		433CD3331B6C3787F473C941B61FC68F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9D9CFF97A2D41D7CB20A427D5386C7A6 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4A74429E5C067F3699A291E840C4FE9A /* Specta */ = {
+			isa = PBXGroup;
+			children = (
+				5D9F9F958C366DCAFB711AFE29E4F26D /* Specta.h */,
+				130508B11300AEFE1F617D73FB4D906E /* SpectaDSL.h */,
+				F12C3427499E0E64912DC8F1C008EA51 /* SpectaDSL.m */,
+				CBFF61AFC3F462DB4EEA87E4F5859E2F /* SpectaTypes.h */,
+				1D42BBDB0F6D514B0A7C09DE4B90ED6F /* SpectaUtility.h */,
+				8D534867F50009274DDA198E64561CFD /* SpectaUtility.m */,
+				1AC36382B9EB0A3EAF6E62180680A5CD /* SPTCallSite.h */,
+				383F30A2468543313F7070B44523AC68 /* SPTCallSite.m */,
+				20D0DD2670F008C71D419224F4983730 /* SPTCompiledExample.h */,
+				4E6DB3B97C44AF6FF6C2E85C962A4931 /* SPTCompiledExample.m */,
+				B83BA28AE5F2F19A6E5FF588AD12D1AF /* SPTExample.h */,
+				D25C906DB8F724A95C033DCF495DA6B5 /* SPTExample.m */,
+				16A6DCD96BB12A00B56E137E05885870 /* SPTExampleGroup.h */,
+				627F129629E99D8F721AA65ACF8AAA86 /* SPTExampleGroup.m */,
+				4D5B81F9CCA50FE33E30B1BDDB0795E1 /* SPTExcludeGlobalBeforeAfterEach.h */,
+				367762465332438C28A71EE9D1C9D2D5 /* SPTGlobalBeforeAfterEach.h */,
+				B4AF9967BA3F073D4FF4B3EDE19F98EF /* SPTSharedExampleGroups.h */,
+				E3BCF07DD24077A4DAE6B620BC3C4F38 /* SPTSharedExampleGroups.m */,
+				409A8DF0AF79F0A733A19C8CC4E47B2D /* SPTSpec.h */,
+				9C7726BFF30A89593F60985A1FD7CEA3 /* SPTSpec.m */,
+				0AD1B118C4265C103775F934E448F2D2 /* SPTTestSuite.h */,
+				90FC643302D6BF385AC4469CFCE9BEC7 /* SPTTestSuite.m */,
+				DAFFE69EB998DC0834AE85175FFEEF7C /* XCTest+Private.h */,
+				9654F5EDC9BD129C44719E156D334BE7 /* XCTestCase+Specta.h */,
+				00E72E7AC1FE8348341697D4E8BA5F02 /* XCTestCase+Specta.m */,
+				8F921BD5CDB0897DE88996753EF3FC0A /* Support Files */,
+			);
+			name = Specta;
+			path = Specta;
+			sourceTree = "<group>";
+		};
+		56E5D334E927A372C5841F7A221F8429 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				7CC1B58738BCD36C0B417912E7A087CD /* Pods-PopularMovies */,
+				DE689465FDC1905834FE4602AB34F116 /* Pods-PopularMoviesTests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		72D1043E2D325E7441D5A143F3DDAF60 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4A74429E5C067F3699A291E840C4FE9A /* Specta */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		7CC1B58738BCD36C0B417912E7A087CD /* Pods-PopularMovies */ = {
+			isa = PBXGroup;
+			children = (
+				6BA573FF1BDAED359272CCDB80B760AC /* Pods-PopularMovies-acknowledgements.markdown */,
+				CD5EF31AADA52AAF26F49D01BE05622D /* Pods-PopularMovies-acknowledgements.plist */,
+				E7B2CEB1DD7AA90ED62B5565F9B52151 /* Pods-PopularMovies-dummy.m */,
+				9F42C3216DEC17620FC4F37B990B51C5 /* Pods-PopularMovies-frameworks.sh */,
+				02BD838DB0E188B876F0390EEF7A04F5 /* Pods-PopularMovies-resources.sh */,
+				49812195F0348429017DF292F6C867B3 /* Pods-PopularMovies.debug.xcconfig */,
+				F71F6109430D450565BA9AFE065D4F48 /* Pods-PopularMovies.release.xcconfig */,
+			);
+			name = "Pods-PopularMovies";
+			path = "Target Support Files/Pods-PopularMovies";
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				433CD3331B6C3787F473C941B61FC68F /* Frameworks */,
+				72D1043E2D325E7441D5A143F3DDAF60 /* Pods */,
+				0E62FF23167B1C84C6A6D40F45908AD5 /* Products */,
+				56E5D334E927A372C5841F7A221F8429 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		8F921BD5CDB0897DE88996753EF3FC0A /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				09F864200F0C7440D3C73841C07F4C3A /* Specta.xcconfig */,
+				06F957306599B95ADFE6CB0CC46A65FC /* Specta-dummy.m */,
+				C0C80D0E688153874F9656A28467D1C4 /* Specta-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Specta";
+			sourceTree = "<group>";
+		};
+		9D9CFF97A2D41D7CB20A427D5386C7A6 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				32DF21EF8268E32D359CD23F2CF3EFE3 /* Foundation.framework */,
+				AECEA2EDA41473899EE391CA038EDC38 /* XCTest.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		DE689465FDC1905834FE4602AB34F116 /* Pods-PopularMoviesTests */ = {
+			isa = PBXGroup;
+			children = (
+				E0868F9EEDAFF69410C89090C4BF4D29 /* Pods-PopularMoviesTests-acknowledgements.markdown */,
+				F2DC89697B14CB54C1FEB2FCC2FED67F /* Pods-PopularMoviesTests-acknowledgements.plist */,
+				EE80776A09EE692E9C83060FFE5322DF /* Pods-PopularMoviesTests-dummy.m */,
+				2D75F4B8CCBAEC2C8C70465E979E2378 /* Pods-PopularMoviesTests-frameworks.sh */,
+				E04EBCACF6AD77CF0F206093DF1216D5 /* Pods-PopularMoviesTests-resources.sh */,
+				8546BBE6C3C3597E9D4E2211B09AE7E3 /* Pods-PopularMoviesTests.debug.xcconfig */,
+				048AADAB2A2B6ED15E05BDFC80649ACE /* Pods-PopularMoviesTests.release.xcconfig */,
+			);
+			name = "Pods-PopularMoviesTests";
+			path = "Target Support Files/Pods-PopularMoviesTests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		1EA7E88E8136A245EADCAC6C69DAC986 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1189982DD84F8AE1936F039FD78B3FB6 /* Specta.h in Headers */,
+				0F5F4563D8E11AE1A4E285ACA4243E16 /* SpectaDSL.h in Headers */,
+				4F61F16B62EE4E596EBE86D915282CCD /* SpectaTypes.h in Headers */,
+				C0B06A66C7DBD7AA5BE1EFB25B7FED4B /* SpectaUtility.h in Headers */,
+				537D57A60623287D9235A44AA9EC45B2 /* SPTCallSite.h in Headers */,
+				8875BFF8BD4918AF926BE09B349A8F49 /* SPTCompiledExample.h in Headers */,
+				BAC7D75ABFE2F797456FC05C919BFD30 /* SPTExample.h in Headers */,
+				E021953440B5DA19B2F1EF2C2BB2635B /* SPTExampleGroup.h in Headers */,
+				AA93E03C3BAEDB26ACE2F6040A2A0118 /* SPTExcludeGlobalBeforeAfterEach.h in Headers */,
+				3ED2C7E53C08A9280D821225BEE50E51 /* SPTGlobalBeforeAfterEach.h in Headers */,
+				5CC0F39E98FB496B3CD53FDDD454052D /* SPTSharedExampleGroups.h in Headers */,
+				A4AFA6812591DC446E2B32C0ED077327 /* SPTSpec.h in Headers */,
+				B2A3A76CC1299E5026012B4DED463FFC /* SPTTestSuite.h in Headers */,
+				FF507A5FE92B7FCE799A6904227CCF5C /* XCTest+Private.h in Headers */,
+				7A8C7BA72A8105F3CA29412CFC5F0BE6 /* XCTestCase+Specta.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		416DE7E960E3843061E36C676273B5FD /* Specta */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 84CDF43A572C2D58D61CB9B1794AF059 /* Build configuration list for PBXNativeTarget "Specta" */;
+			buildPhases = (
+				27EB3DED2CA8DB452820706A4250F8DE /* Sources */,
+				1D39F741054CF48F372468E8E8A1F9DE /* Frameworks */,
+				1EA7E88E8136A245EADCAC6C69DAC986 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Specta;
+			productName = Specta;
+			productReference = FE99A5CFD823AE10837C08AD9C680F80 /* libSpecta.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		AE544DAA9EC37C2B4947A7A6C37C755F /* Pods-PopularMovies */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F543F5A7D2805FBA84EB754AF23C5B5A /* Build configuration list for PBXNativeTarget "Pods-PopularMovies" */;
+			buildPhases = (
+				79A4CD51C7E8057068284A31BC19EC36 /* Sources */,
+				DCF8BC3030559C7D8A946A1B52895F34 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-PopularMovies";
+			productName = "Pods-PopularMovies";
+			productReference = FAB2D78D0759F14EA80E2B520AD327EE /* libPods-PopularMovies.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		D28042401A6E0626DAE50295DA9D4483 /* Pods-PopularMoviesTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F6F69632F6358FF621959FE73B81FF10 /* Build configuration list for PBXNativeTarget "Pods-PopularMoviesTests" */;
+			buildPhases = (
+				E37069E293DB797D87F27FAFE3512622 /* Sources */,
+				0E2823569A32036D69E6FB5B16573C32 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B0242D4656D135D0A3EB6E0DEF8081A9 /* PBXTargetDependency */,
+			);
+			name = "Pods-PopularMoviesTests";
+			productName = "Pods-PopularMoviesTests";
+			productReference = 470DDCA495F11680497322F4479E6FEC /* libPods-PopularMoviesTests.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 0E62FF23167B1C84C6A6D40F45908AD5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AE544DAA9EC37C2B4947A7A6C37C755F /* Pods-PopularMovies */,
+				D28042401A6E0626DAE50295DA9D4483 /* Pods-PopularMoviesTests */,
+				416DE7E960E3843061E36C676273B5FD /* Specta */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		27EB3DED2CA8DB452820706A4250F8DE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BE2B18D2CD428E7F88E32F403C023D53 /* Specta-dummy.m in Sources */,
+				D6A9188338BE311BEF9EFDD314AE8660 /* SpectaDSL.m in Sources */,
+				4DF221E381A4369D5834DFD1868A8092 /* SpectaUtility.m in Sources */,
+				81042712CEF93CE6224E2AD8E91A09CC /* SPTCallSite.m in Sources */,
+				196A784C055C3FE8DF8CAC088F4CDD94 /* SPTCompiledExample.m in Sources */,
+				9BEFD916C5CDB17F8702CA4205AACA6C /* SPTExample.m in Sources */,
+				622A46E71227820686D39B5BB6410544 /* SPTExampleGroup.m in Sources */,
+				172BFA7AB620AFA1C2C60345CC9E686B /* SPTSharedExampleGroups.m in Sources */,
+				C546A1A2E63FA503EAF1736F052C492F /* SPTSpec.m in Sources */,
+				3A2CD051111539100AB5CE72E5B4E99F /* SPTTestSuite.m in Sources */,
+				2B933FB6389E3CDC56C59C79310F938E /* XCTestCase+Specta.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		79A4CD51C7E8057068284A31BC19EC36 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4AC1AB7C03AAD86D22C4C05FBFC26708 /* Pods-PopularMovies-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E37069E293DB797D87F27FAFE3512622 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A2A44E44D2F4BB91D3894A186C17135F /* Pods-PopularMoviesTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B0242D4656D135D0A3EB6E0DEF8081A9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Specta;
+			target = 416DE7E960E3843061E36C676273B5FD /* Specta */;
+			targetProxy = A65C1456E5AC44B1B67CCFEF45550FD4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		089992A46B637FE823ADE0D9656C472B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 09F864200F0C7440D3C73841C07F4C3A /* Specta.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Specta/Specta-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		10FB1BFC69F08DF165CC0302AF95131D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 048AADAB2A2B6ED15E05BDFC80649ACE /* Pods-PopularMoviesTests.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		16F89A5F05F66EBAD219DD7236C93B72 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 09F864200F0C7440D3C73841C07F4C3A /* Specta.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Specta/Specta-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		469C6DB913BAD273534FB4C3418497EF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8546BBE6C3C3597E9D4E2211B09AE7E3 /* Pods-PopularMoviesTests.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		673254EEAF0B5BF4596080C749645884 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		936640AD28815D668CE4491E00637532 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F71F6109430D450565BA9AFE065D4F48 /* Pods-PopularMovies.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		D0DD0D717A99F444B38496314CA9734D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 49812195F0348429017DF292F6C867B3 /* Pods-PopularMovies.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		E4F26E6EB105713A6A7E7E2E283AC2DF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E4F26E6EB105713A6A7E7E2E283AC2DF /* Debug */,
+				673254EEAF0B5BF4596080C749645884 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		84CDF43A572C2D58D61CB9B1794AF059 /* Build configuration list for PBXNativeTarget "Specta" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				16F89A5F05F66EBAD219DD7236C93B72 /* Debug */,
+				089992A46B637FE823ADE0D9656C472B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F543F5A7D2805FBA84EB754AF23C5B5A /* Build configuration list for PBXNativeTarget "Pods-PopularMovies" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D0DD0D717A99F444B38496314CA9734D /* Debug */,
+				936640AD28815D668CE4491E00637532 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F6F69632F6358FF621959FE73B81FF10 /* Build configuration list for PBXNativeTarget "Pods-PopularMoviesTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				469C6DB913BAD273534FB4C3418497EF /* Debug */,
+				10FB1BFC69F08DF165CC0302AF95131D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

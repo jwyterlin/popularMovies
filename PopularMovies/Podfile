@@ -1,0 +1,9 @@
+target :PopularMovies do
+# your app dependencies
+
+  target :PopularMoviesTests do
+    inherit! :search_paths
+
+    pod 'Specta', '~> 1.0'
+  end
+end
