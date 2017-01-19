@@ -1,5 +1,5 @@
 //
-//  MovieModelTests.m
+//  MoviePresenterTests.m
 //  PopularMovies
 //
 //  Created by Jhonathan Wyterlin on 19/01/17.
@@ -14,7 +14,10 @@
 // Model
 #import "MovieModel.h"
 
-SpecBegin(MovieModel)
+// Presenter
+#import "MoviePresenter.h"
+
+SpecBegin(MoviePresenter)
 
 NSString *title = @"Lorem Ipsum";
 NSNumber *year = @1998;
@@ -24,14 +27,16 @@ NSData *picture = nil;
 it (@"should use the title available. ", ^{
     
     MovieModel *movieModel = [[MovieModel alloc] initWithTitle:title year:year overview:overview picture:picture];
-    expect( movieModel.title ).to.equal(@"Lorem Ipsum");
+    MoviePresenter *moviePresenter = [[MoviePresenter alloc] initWithMovie:movieModel];
+    expect( moviePresenter.titleText ).to.equal(@"Lorem Ipsum");
     
 });
 
-it (@"should be title nil. ", ^{
+it (@"should not use an unavailable title. ", ^{
     
     MovieModel *movieModel = [[MovieModel alloc] initWithTitle:nil year:year overview:overview picture:picture];
-    expect( movieModel.title ).to.equal(nil);
+    MoviePresenter *moviePresenter = [[MoviePresenter alloc] initWithMovie:movieModel];
+    expect( moviePresenter.titleText ).to.equal(@"No title");
     
 });
 
