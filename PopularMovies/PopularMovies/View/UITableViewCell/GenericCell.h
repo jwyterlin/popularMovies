@@ -10,4 +10,6 @@
 
 @interface GenericCell : UITableViewCell
 
++(CGFloat)heightForCell;
+
 @end

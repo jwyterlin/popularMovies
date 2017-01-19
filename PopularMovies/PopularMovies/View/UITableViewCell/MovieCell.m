@@ -21,6 +21,12 @@
 
 @implementation MovieCell
 
+#pragma mark - Overriding super methods
+
++(CGFloat)heightForCell {
+    return 137.0f;
+}
+
 #pragma mark - Public methods
 
 +(MovieCell *)cellAtIndexPath:(NSIndexPath *)indexPath tableView:(UITableView *)tableView moviePresenter:(MoviePresenter *)moviePresenter {

@@ -129,8 +129,8 @@
 		7B02E7971E308D18006FDE50 /* UITableViewCell */ = {
 			isa = PBXGroup;
 			children = (
-				7B02E79D1E308D87006FDE50 /* MovieCell */,
 				7B02E79C1E308D5F006FDE50 /* GenericCell */,
+				7B02E79D1E308D87006FDE50 /* MovieCell */,
 			);
 			name = UITableViewCell;
 			sourceTree = "<group>";
