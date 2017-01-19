@@ -9,7 +9,8 @@
 #import "MoviesViewController.h"
 
 // Interactor
-#import "MoviesInteractor.h"
+#import "MoviesPopularInteractor.h"
+#import "MoviesSearchedInteractor.h"
 
 // Model
 #import "MovieModel.h"
@@ -25,8 +26,9 @@
 @property(weak,nonatomic) IBOutlet UITableView *tableView;
 @property(strong,nonatomic) UISearchController *searchController;
 
-// Interactor
-@property(strong,nonatomic) MoviesInteractor *moviesInteractor;
+// Interactors
+@property(strong,nonatomic) MoviesPopularInteractor *moviesPopularInteractor;
+@property(strong,nonatomic) MoviesSearchedInteractor *moviesSearchedInteractor;
 
 @end
 
@@ -49,12 +51,12 @@
 #pragma mark - UITableViewDataSource
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [self.moviesInteractor numberOfRows];
+    return [self.moviesPopularInteractor numberOfRows];
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    MovieModel *movieModel = [self.moviesInteractor movieAtIndexPath:indexPath];
+    MovieModel *movieModel = [self.moviesPopularInteractor movieAtIndexPath:indexPath];
     MoviePresenter *moviePresenter = [[MoviePresenter alloc] initWithMovie:movieModel];
     
     return [MovieCell cellAtIndexPath:indexPath tableView:tableView moviePresenter:moviePresenter];
@@ -86,15 +88,27 @@
 
 #pragma mark - Lazy Instances
 
--(MoviesInteractor *)moviesInteractor {
+-(MoviesPopularInteractor *)moviesPopularInteractor {
     
-    if ( ! _moviesInteractor ) {
+    if ( ! _moviesPopularInteractor ) {
         
-        _moviesInteractor = [MoviesInteractor new];
+        _moviesPopularInteractor = [MoviesPopularInteractor new];
         
     }
     
-    return _moviesInteractor;
+    return _moviesPopularInteractor;
+    
+}
+
+-(MoviesSearchedInteractor *)moviesSearchedInteractor {
+    
+    if ( ! _moviesSearchedInteractor ) {
+        
+        _moviesSearchedInteractor = [MoviesSearchedInteractor new];
+        
+    }
+    
+    return _moviesSearchedInteractor;
     
 }
 

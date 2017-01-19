@@ -169,8 +169,8 @@
 		7B02E7A51E309915006FDE50 /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
-				7BBE95641E3110E6004B54DE /* MoviesPopular */,
 				7BBE95621E310F2E004B54DE /* Movies */,
+				7BBE95641E3110E6004B54DE /* MoviesPopular */,
 				7BBE95631E310F51004B54DE /* MoviesSearched */,
 			);
 			name = Interactor;
