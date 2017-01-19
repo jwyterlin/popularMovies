@@ -13,12 +13,6 @@
 // Model
 #import "MovieModel.h"
 
-@interface MoviesInteractor()
-
-@property(strong,nonatomic) NSMutableArray<MovieModel *> *movies;
-
-@end
-
 @implementation MoviesInteractor
 
 -(MovieModel *)movieAtIndexPath:(NSIndexPath *)indexPath {

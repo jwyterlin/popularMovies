@@ -12,6 +12,8 @@
 
 @interface MoviesInteractor : NSObject
 
+@property(strong,nonatomic) NSMutableArray<MovieModel *> *movies;
+
 -(MovieModel *)movieAtIndexPath:(NSIndexPath *)indexPath;
 
 -(NSInteger)numberOfRows;

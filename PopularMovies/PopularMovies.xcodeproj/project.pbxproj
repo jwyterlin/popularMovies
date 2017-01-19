@@ -21,6 +21,8 @@
 		7B02E7A41E308F1C006FDE50 /* MovieCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B02E7A21E308F1C006FDE50 /* MovieCell.xib */; };
 		7B02E7A81E309941006FDE50 /* MoviesInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B02E7A71E309941006FDE50 /* MoviesInteractor.m */; };
 		7B02E7A91E309941006FDE50 /* MoviesInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B02E7A71E309941006FDE50 /* MoviesInteractor.m */; };
+		7B02E7AC1E309FE8006FDE50 /* MoviesSearchedInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B02E7AB1E309FE8006FDE50 /* MoviesSearchedInteractor.m */; };
+		7B02E7AD1E309FE8006FDE50 /* MoviesSearchedInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B02E7AB1E309FE8006FDE50 /* MoviesSearchedInteractor.m */; };
 		7B34D01C1E3050D000DF4013 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B34D01B1E3050D000DF4013 /* main.m */; };
 		7B34D01F1E3050D000DF4013 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B34D01E1E3050D000DF4013 /* AppDelegate.m */; };
 		7B34D0251E3050D000DF4013 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B34D0231E3050D000DF4013 /* Main.storyboard */; };
@@ -56,6 +58,8 @@
 		7B02E7A21E308F1C006FDE50 /* MovieCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MovieCell.xib; path = View/UITableViewCell/MovieCell.xib; sourceTree = "<group>"; };
 		7B02E7A61E309941006FDE50 /* MoviesInteractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MoviesInteractor.h; path = Interactor/MoviesInteractor.h; sourceTree = "<group>"; };
 		7B02E7A71E309941006FDE50 /* MoviesInteractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MoviesInteractor.m; path = Interactor/MoviesInteractor.m; sourceTree = "<group>"; };
+		7B02E7AA1E309FE8006FDE50 /* MoviesSearchedInteractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MoviesSearchedInteractor.h; path = Interactor/MoviesSearchedInteractor.h; sourceTree = "<group>"; };
+		7B02E7AB1E309FE8006FDE50 /* MoviesSearchedInteractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MoviesSearchedInteractor.m; path = Interactor/MoviesSearchedInteractor.m; sourceTree = "<group>"; };
 		7B34D0171E3050D000DF4013 /* PopularMovies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PopularMovies.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B34D01B1E3050D000DF4013 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7B34D01D1E3050D000DF4013 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -163,6 +167,8 @@
 			children = (
 				7B02E7A61E309941006FDE50 /* MoviesInteractor.h */,
 				7B02E7A71E309941006FDE50 /* MoviesInteractor.m */,
+				7B02E7AA1E309FE8006FDE50 /* MoviesSearchedInteractor.h */,
+				7B02E7AB1E309FE8006FDE50 /* MoviesSearchedInteractor.m */,
 			);
 			name = Interactor;
 			sourceTree = "<group>";
@@ -484,6 +490,7 @@
 			files = (
 				7B02E78C1E307FFB006FDE50 /* MovieModel.m in Sources */,
 				7B34D01F1E3050D000DF4013 /* AppDelegate.m in Sources */,
+				7B02E7AC1E309FE8006FDE50 /* MoviesSearchedInteractor.m in Sources */,
 				7B34D0411E30545500DF4013 /* MoviesViewController.m in Sources */,
 				7B02E7A81E309941006FDE50 /* MoviesInteractor.m in Sources */,
 				7B02E7A01E308D9B006FDE50 /* MovieCell.m in Sources */,
@@ -499,6 +506,7 @@
 			files = (
 				7B02E78D1E307FFB006FDE50 /* MovieModel.m in Sources */,
 				7B02E7951E308B8E006FDE50 /* MoviePresenterTests.m in Sources */,
+				7B02E7AD1E309FE8006FDE50 /* MoviesSearchedInteractor.m in Sources */,
 				7B34D0421E30545500DF4013 /* MoviesViewController.m in Sources */,
 				7B02E7A91E309941006FDE50 /* MoviesInteractor.m in Sources */,
 				7B02E7A11E308D9B006FDE50 /* MovieCell.m in Sources */,
