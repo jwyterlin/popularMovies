@@ -40,4 +40,12 @@ it (@"should not use an unavailable title. ", ^{
     
 });
 
+it (@"should not have title with year between parenthesis. ", ^{
+    
+    MovieModel *movieModel = [[MovieModel alloc] initWithTitle:title year:year overview:overview picture:picture];
+    MoviePresenter *moviePresenter = [[MoviePresenter alloc] initWithMovie:movieModel];
+    expect( moviePresenter.titleYearText ).to.equal(@"Lorem Ipsum (1998)");
+    
+});
+
 SpecEnd
