@@ -8,6 +8,12 @@
 
 #import "GenericService.h"
 
+@class MovieModel;
+
 @interface MovieService : GenericService
+
+-(void)moviesPopularWithPage:(NSNumber *)page
+                     success:(void(^)(MovieModel *movie))success
+                     failure:(void(^)(BOOL hasNoConnection, NSError *error))failure;
 
 @end

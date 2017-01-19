@@ -16,7 +16,8 @@
 
 @implementation MovieService
 
--(void)moviesPopularWithPage:(NSNumber *)page success:(void(^)(MovieModel *movie))success
+-(void)moviesPopularWithPage:(NSNumber *)page
+                     success:(void(^)(MovieModel *movie))success
                      failure:(void(^)(BOOL hasNoConnection, NSError *error))failure {
     
     NSString *url = @"";
