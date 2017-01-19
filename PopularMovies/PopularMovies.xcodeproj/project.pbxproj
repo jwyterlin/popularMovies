@@ -27,6 +27,14 @@
 		7B02E7B21E317A85006FDE50 /* GenericService.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B02E7B01E317A85006FDE50 /* GenericService.m */; };
 		7B02E7B71E317AD0006FDE50 /* MovieService.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B02E7B61E317AD0006FDE50 /* MovieService.m */; };
 		7B02E7B81E317AD0006FDE50 /* MovieService.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B02E7B61E317AD0006FDE50 /* MovieService.m */; };
+		7B02E7BD1E317BD0006FDE50 /* Connection.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B02E7BC1E317BD0006FDE50 /* Connection.m */; };
+		7B02E7BE1E317BD0006FDE50 /* Connection.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B02E7BC1E317BD0006FDE50 /* Connection.m */; };
+		7B02E7C21E317C5F006FDE50 /* NetAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B02E7C11E317C5F006FDE50 /* NetAPIClient.m */; };
+		7B02E7C31E317C5F006FDE50 /* NetAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B02E7C11E317C5F006FDE50 /* NetAPIClient.m */; };
+		7B02E7C71E317CD1006FDE50 /* Routes.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B02E7C61E317CD1006FDE50 /* Routes.m */; };
+		7B02E7C81E317CD1006FDE50 /* Routes.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B02E7C61E317CD1006FDE50 /* Routes.m */; };
+		7B02E7CC1E317E8E006FDE50 /* Reachability+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B02E7CB1E317E8E006FDE50 /* Reachability+Helper.m */; };
+		7B02E7CD1E317E8E006FDE50 /* Reachability+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B02E7CB1E317E8E006FDE50 /* Reachability+Helper.m */; };
 		7B34D01C1E3050D000DF4013 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B34D01B1E3050D000DF4013 /* main.m */; };
 		7B34D01F1E3050D000DF4013 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B34D01E1E3050D000DF4013 /* AppDelegate.m */; };
 		7B34D0251E3050D000DF4013 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B34D0231E3050D000DF4013 /* Main.storyboard */; };
@@ -71,6 +79,14 @@
 		7B02E7B01E317A85006FDE50 /* GenericService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GenericService.m; path = Service/GenericService.m; sourceTree = "<group>"; };
 		7B02E7B51E317AD0006FDE50 /* MovieService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MovieService.h; path = Service/MovieService.h; sourceTree = "<group>"; };
 		7B02E7B61E317AD0006FDE50 /* MovieService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MovieService.m; path = Service/MovieService.m; sourceTree = "<group>"; };
+		7B02E7BB1E317BD0006FDE50 /* Connection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Connection.h; path = Utils/Connection.h; sourceTree = "<group>"; };
+		7B02E7BC1E317BD0006FDE50 /* Connection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Connection.m; path = Utils/Connection.m; sourceTree = "<group>"; };
+		7B02E7C01E317C5F006FDE50 /* NetAPIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NetAPIClient.h; path = Utils/NetAPIClient.h; sourceTree = "<group>"; };
+		7B02E7C11E317C5F006FDE50 /* NetAPIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NetAPIClient.m; path = Utils/NetAPIClient.m; sourceTree = "<group>"; };
+		7B02E7C51E317CD1006FDE50 /* Routes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Routes.h; path = Utils/Routes.h; sourceTree = "<group>"; };
+		7B02E7C61E317CD1006FDE50 /* Routes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Routes.m; path = Utils/Routes.m; sourceTree = "<group>"; };
+		7B02E7CA1E317E8E006FDE50 /* Reachability+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Reachability+Helper.h"; path = "Category/Reachability+Helper.h"; sourceTree = "<group>"; };
+		7B02E7CB1E317E8E006FDE50 /* Reachability+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Reachability+Helper.m"; path = "Category/Reachability+Helper.m"; sourceTree = "<group>"; };
 		7B34D0171E3050D000DF4013 /* PopularMovies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PopularMovies.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B34D01B1E3050D000DF4013 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7B34D01D1E3050D000DF4013 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -213,6 +229,60 @@
 			name = MovieService;
 			sourceTree = "<group>";
 		};
+		7B02E7B91E317BA5006FDE50 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				7B02E7BA1E317BB5006FDE50 /* Connection */,
+				7B02E7BF1E317C34006FDE50 /* NetAPIClient */,
+				7B02E7C41E317CBE006FDE50 /* Routes */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
+		7B02E7BA1E317BB5006FDE50 /* Connection */ = {
+			isa = PBXGroup;
+			children = (
+				7B02E7BB1E317BD0006FDE50 /* Connection.h */,
+				7B02E7BC1E317BD0006FDE50 /* Connection.m */,
+			);
+			name = Connection;
+			sourceTree = "<group>";
+		};
+		7B02E7BF1E317C34006FDE50 /* NetAPIClient */ = {
+			isa = PBXGroup;
+			children = (
+				7B02E7C01E317C5F006FDE50 /* NetAPIClient.h */,
+				7B02E7C11E317C5F006FDE50 /* NetAPIClient.m */,
+			);
+			name = NetAPIClient;
+			sourceTree = "<group>";
+		};
+		7B02E7C41E317CBE006FDE50 /* Routes */ = {
+			isa = PBXGroup;
+			children = (
+				7B02E7C51E317CD1006FDE50 /* Routes.h */,
+				7B02E7C61E317CD1006FDE50 /* Routes.m */,
+			);
+			name = Routes;
+			sourceTree = "<group>";
+		};
+		7B02E7C91E317E6D006FDE50 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				7B02E7CE1E317F35006FDE50 /* Reachability */,
+			);
+			name = Category;
+			sourceTree = "<group>";
+		};
+		7B02E7CE1E317F35006FDE50 /* Reachability */ = {
+			isa = PBXGroup;
+			children = (
+				7B02E7CA1E317E8E006FDE50 /* Reachability+Helper.h */,
+				7B02E7CB1E317E8E006FDE50 /* Reachability+Helper.m */,
+			);
+			name = Reachability;
+			sourceTree = "<group>";
+		};
 		7B34D00E1E3050D000DF4013 = {
 			isa = PBXGroup;
 			children = (
@@ -236,14 +306,16 @@
 		7B34D0191E3050D000DF4013 /* PopularMovies */ = {
 			isa = PBXGroup;
 			children = (
-				7B02E7AE1E317A62006FDE50 /* Service */,
 				7B34D0431E30545D00DF4013 /* AppDelegate */,
+				7B02E7C91E317E6D006FDE50 /* Category */,
 				7B34D0441E30546900DF4013 /* Controller */,
 				7B02E7A51E309915006FDE50 /* Interactor */,
 				7B02E7891E307FE0006FDE50 /* Model */,
 				7B02E78E1E3080F7006FDE50 /* Presenter */,
+				7B02E7AE1E317A62006FDE50 /* Service */,
 				7B34D0451E30547900DF4013 /* Storyboard */,
 				7B34D01A1E3050D000DF4013 /* Supporting Files */,
+				7B02E7B91E317BA5006FDE50 /* Utils */,
 				7B02E7961E308D12006FDE50 /* View */,
 			);
 			path = PopularMovies;
@@ -574,9 +646,13 @@
 				7B34D01C1E3050D000DF4013 /* main.m in Sources */,
 				7BBE95671E311109004B54DE /* MoviesPopularInteractor.m in Sources */,
 				7B02E7911E308116006FDE50 /* MoviePresenter.m in Sources */,
+				7B02E7BD1E317BD0006FDE50 /* Connection.m in Sources */,
 				7B02E7B11E317A85006FDE50 /* GenericService.m in Sources */,
 				7B02E7B71E317AD0006FDE50 /* MovieService.m in Sources */,
+				7B02E7CC1E317E8E006FDE50 /* Reachability+Helper.m in Sources */,
+				7B02E7C71E317CD1006FDE50 /* Routes.m in Sources */,
 				7B02E79A1E308D5A006FDE50 /* GenericCell.m in Sources */,
+				7B02E7C21E317C5F006FDE50 /* NetAPIClient.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -585,15 +661,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				7B02E7B81E317AD0006FDE50 /* MovieService.m in Sources */,
+				7B02E7BE1E317BD0006FDE50 /* Connection.m in Sources */,
+				7B02E7CD1E317E8E006FDE50 /* Reachability+Helper.m in Sources */,
 				7B02E78D1E307FFB006FDE50 /* MovieModel.m in Sources */,
 				7B02E7951E308B8E006FDE50 /* MoviePresenterTests.m in Sources */,
 				7B02E7AD1E309FE8006FDE50 /* MoviesSearchedInteractor.m in Sources */,
+				7B02E7C81E317CD1006FDE50 /* Routes.m in Sources */,
 				7B34D0421E30545500DF4013 /* MoviesViewController.m in Sources */,
 				7B02E7A91E309941006FDE50 /* MoviesInteractor.m in Sources */,
 				7B02E7A11E308D9B006FDE50 /* MovieCell.m in Sources */,
 				7B34D0481E307D4E00DF4013 /* MovieModelTests.m in Sources */,
 				7BBE956B1E3112A0004B54DE /* MoviesInteractorTests.m in Sources */,
 				7BBE95681E311109004B54DE /* MoviesPopularInteractor.m in Sources */,
+				7B02E7C31E317C5F006FDE50 /* NetAPIClient.m in Sources */,
 				7B02E7B21E317A85006FDE50 /* GenericService.m in Sources */,
 				7B02E7921E308116006FDE50 /* MoviePresenter.m in Sources */,
 				7B02E79B1E308D5A006FDE50 /* GenericCell.m in Sources */,
