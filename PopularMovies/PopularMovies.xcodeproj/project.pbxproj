@@ -37,6 +37,8 @@
 		7B02E7CD1E317E8E006FDE50 /* Reachability+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B02E7CB1E317E8E006FDE50 /* Reachability+Helper.m */; };
 		7B02E7D31E31808E006FDE50 /* MovieParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B02E7D21E31808E006FDE50 /* MovieParser.m */; };
 		7B02E7D41E31808E006FDE50 /* MovieParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B02E7D21E31808E006FDE50 /* MovieParser.m */; };
+		7B02E7D81E318238006FDE50 /* Validator.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B02E7D71E318238006FDE50 /* Validator.m */; };
+		7B02E7D91E318238006FDE50 /* Validator.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B02E7D71E318238006FDE50 /* Validator.m */; };
 		7B34D01C1E3050D000DF4013 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B34D01B1E3050D000DF4013 /* main.m */; };
 		7B34D01F1E3050D000DF4013 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B34D01E1E3050D000DF4013 /* AppDelegate.m */; };
 		7B34D0251E3050D000DF4013 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B34D0231E3050D000DF4013 /* Main.storyboard */; };
@@ -91,6 +93,8 @@
 		7B02E7CB1E317E8E006FDE50 /* Reachability+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Reachability+Helper.m"; path = "Category/Reachability+Helper.m"; sourceTree = "<group>"; };
 		7B02E7D11E31808E006FDE50 /* MovieParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MovieParser.h; path = Parser/MovieParser.h; sourceTree = "<group>"; };
 		7B02E7D21E31808E006FDE50 /* MovieParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MovieParser.m; path = Parser/MovieParser.m; sourceTree = "<group>"; };
+		7B02E7D61E318238006FDE50 /* Validator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Validator.h; path = Utils/Validator.h; sourceTree = "<group>"; };
+		7B02E7D71E318238006FDE50 /* Validator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Validator.m; path = Utils/Validator.m; sourceTree = "<group>"; };
 		7B34D0171E3050D000DF4013 /* PopularMovies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PopularMovies.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B34D01B1E3050D000DF4013 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7B34D01D1E3050D000DF4013 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -239,6 +243,7 @@
 				7B02E7BA1E317BB5006FDE50 /* Connection */,
 				7B02E7BF1E317C34006FDE50 /* NetAPIClient */,
 				7B02E7C41E317CBE006FDE50 /* Routes */,
+				7B02E7D51E318224006FDE50 /* Validator */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -302,6 +307,15 @@
 				7B02E7D21E31808E006FDE50 /* MovieParser.m */,
 			);
 			name = MovieParser;
+			sourceTree = "<group>";
+		};
+		7B02E7D51E318224006FDE50 /* Validator */ = {
+			isa = PBXGroup;
+			children = (
+				7B02E7D61E318238006FDE50 /* Validator.h */,
+				7B02E7D71E318238006FDE50 /* Validator.m */,
+			);
+			name = Validator;
 			sourceTree = "<group>";
 		};
 		7B34D00E1E3050D000DF4013 = {
@@ -669,6 +683,7 @@
 				7BBE95671E311109004B54DE /* MoviesPopularInteractor.m in Sources */,
 				7B02E7911E308116006FDE50 /* MoviePresenter.m in Sources */,
 				7B02E7BD1E317BD0006FDE50 /* Connection.m in Sources */,
+				7B02E7D81E318238006FDE50 /* Validator.m in Sources */,
 				7B02E7B11E317A85006FDE50 /* GenericService.m in Sources */,
 				7B02E7D31E31808E006FDE50 /* MovieParser.m in Sources */,
 				7B02E7B71E317AD0006FDE50 /* MovieService.m in Sources */,
@@ -698,6 +713,7 @@
 				7BBE956B1E3112A0004B54DE /* MoviesInteractorTests.m in Sources */,
 				7BBE95681E311109004B54DE /* MoviesPopularInteractor.m in Sources */,
 				7B02E7C31E317C5F006FDE50 /* NetAPIClient.m in Sources */,
+				7B02E7D91E318238006FDE50 /* Validator.m in Sources */,
 				7B02E7B21E317A85006FDE50 /* GenericService.m in Sources */,
 				7B02E7921E308116006FDE50 /* MoviePresenter.m in Sources */,
 				7B02E79B1E308D5A006FDE50 /* GenericCell.m in Sources */,
