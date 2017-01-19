@@ -1,6 +1,9 @@
 target :PopularMovies do
 # your app dependencies
 
+  pod 'AFNetworking', '~> 3.0'
+  pod 'Reachability', '~> 3.2'
+
   target :PopularMoviesTests do
     inherit! :search_paths
 
