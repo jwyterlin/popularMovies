@@ -19,6 +19,8 @@
 		7B02E7A11E308D9B006FDE50 /* MovieCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B02E79F1E308D9B006FDE50 /* MovieCell.m */; };
 		7B02E7A31E308F1C006FDE50 /* MovieCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B02E7A21E308F1C006FDE50 /* MovieCell.xib */; };
 		7B02E7A41E308F1C006FDE50 /* MovieCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B02E7A21E308F1C006FDE50 /* MovieCell.xib */; };
+		7B02E7A81E309941006FDE50 /* MoviesInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B02E7A71E309941006FDE50 /* MoviesInteractor.m */; };
+		7B02E7A91E309941006FDE50 /* MoviesInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B02E7A71E309941006FDE50 /* MoviesInteractor.m */; };
 		7B34D01C1E3050D000DF4013 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B34D01B1E3050D000DF4013 /* main.m */; };
 		7B34D01F1E3050D000DF4013 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B34D01E1E3050D000DF4013 /* AppDelegate.m */; };
 		7B34D0251E3050D000DF4013 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B34D0231E3050D000DF4013 /* Main.storyboard */; };
@@ -52,6 +54,8 @@
 		7B02E79E1E308D9B006FDE50 /* MovieCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MovieCell.h; path = View/UITableViewCell/MovieCell.h; sourceTree = "<group>"; };
 		7B02E79F1E308D9B006FDE50 /* MovieCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MovieCell.m; path = View/UITableViewCell/MovieCell.m; sourceTree = "<group>"; };
 		7B02E7A21E308F1C006FDE50 /* MovieCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MovieCell.xib; path = View/UITableViewCell/MovieCell.xib; sourceTree = "<group>"; };
+		7B02E7A61E309941006FDE50 /* MoviesInteractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MoviesInteractor.h; path = Interactor/MoviesInteractor.h; sourceTree = "<group>"; };
+		7B02E7A71E309941006FDE50 /* MoviesInteractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MoviesInteractor.m; path = Interactor/MoviesInteractor.m; sourceTree = "<group>"; };
 		7B34D0171E3050D000DF4013 /* PopularMovies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PopularMovies.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B34D01B1E3050D000DF4013 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7B34D01D1E3050D000DF4013 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -154,6 +158,15 @@
 			name = MovieCell;
 			sourceTree = "<group>";
 		};
+		7B02E7A51E309915006FDE50 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				7B02E7A61E309941006FDE50 /* MoviesInteractor.h */,
+				7B02E7A71E309941006FDE50 /* MoviesInteractor.m */,
+			);
+			name = Interactor;
+			sourceTree = "<group>";
+		};
 		7B34D00E1E3050D000DF4013 = {
 			isa = PBXGroup;
 			children = (
@@ -177,13 +190,14 @@
 		7B34D0191E3050D000DF4013 /* PopularMovies */ = {
 			isa = PBXGroup;
 			children = (
-				7B02E7961E308D12006FDE50 /* View */,
 				7B34D0431E30545D00DF4013 /* AppDelegate */,
 				7B34D0441E30546900DF4013 /* Controller */,
+				7B02E7A51E309915006FDE50 /* Interactor */,
 				7B02E7891E307FE0006FDE50 /* Model */,
 				7B02E78E1E3080F7006FDE50 /* Presenter */,
 				7B34D0451E30547900DF4013 /* Storyboard */,
 				7B34D01A1E3050D000DF4013 /* Supporting Files */,
+				7B02E7961E308D12006FDE50 /* View */,
 			);
 			path = PopularMovies;
 			sourceTree = "<group>";
@@ -471,6 +485,7 @@
 				7B02E78C1E307FFB006FDE50 /* MovieModel.m in Sources */,
 				7B34D01F1E3050D000DF4013 /* AppDelegate.m in Sources */,
 				7B34D0411E30545500DF4013 /* MoviesViewController.m in Sources */,
+				7B02E7A81E309941006FDE50 /* MoviesInteractor.m in Sources */,
 				7B02E7A01E308D9B006FDE50 /* MovieCell.m in Sources */,
 				7B34D01C1E3050D000DF4013 /* main.m in Sources */,
 				7B02E7911E308116006FDE50 /* MoviePresenter.m in Sources */,
@@ -485,6 +500,7 @@
 				7B02E78D1E307FFB006FDE50 /* MovieModel.m in Sources */,
 				7B02E7951E308B8E006FDE50 /* MoviePresenterTests.m in Sources */,
 				7B34D0421E30545500DF4013 /* MoviesViewController.m in Sources */,
+				7B02E7A91E309941006FDE50 /* MoviesInteractor.m in Sources */,
 				7B02E7A11E308D9B006FDE50 /* MovieCell.m in Sources */,
 				7B34D0481E307D4E00DF4013 /* MovieModelTests.m in Sources */,
 				7B02E7921E308116006FDE50 /* MoviePresenter.m in Sources */,
