@@ -1,5 +1,5 @@
 //
-//  GenericService.h
+//  MovieParser.h
 //  PopularMovies
 //
 //  Created by Jhonathan Wyterlin on 19/01/17.
@@ -8,9 +8,10 @@
 
 #import <Foundation/Foundation.h>
 
-// Utils
-#import "Connection.h"
+@class MovieModel;
 
-@interface GenericService : NSObject
+@interface MovieParser : NSObject
+
+-(MovieModel *)movieWithJson:(NSDictionary *)json;
 
 @end
