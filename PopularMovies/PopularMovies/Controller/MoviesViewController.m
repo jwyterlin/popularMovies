@@ -8,9 +8,10 @@
 
 #import "MoviesViewController.h"
 
-@interface MoviesViewController()<UITableViewDataSource>
+@interface MoviesViewController()<UITableViewDataSource,UISearchBarDelegate,UISearchResultsUpdating>
 
 @property(weak,nonatomic) IBOutlet UITableView *tableView;
+@property(strong,nonatomic) UISearchController *searchController;
 
 @end
 
@@ -38,6 +39,19 @@
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     return [UITableViewCell new];
+}
+
+#pragma mark - Setup SearchController 
+
+-(void)setupSearchController {
+    
+    self.searchController.searchResultsUpdater = self;
+    self.searchController.searchBar.delegate = self;
+    self.definesPresentationContext = YES;
+    self.searchController.dimsBackgroundDuringPresentation = NO;
+    
+    self.tableView.tableHeaderView = self.searchController.searchBar;
+    
 }
 
 @end
