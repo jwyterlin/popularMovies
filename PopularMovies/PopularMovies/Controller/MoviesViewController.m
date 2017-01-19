@@ -8,22 +8,36 @@
 
 #import "MoviesViewController.h"
 
-@interface MoviesViewController ()
+@interface MoviesViewController()<UITableViewDataSource>
+
+@property(weak,nonatomic) IBOutlet UITableView *tableView;
 
 @end
 
 @implementation MoviesViewController
 
-- (void)viewDidLoad {
+#pragma mark - ViewController
+
+-(void)viewDidLoad {
+    
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
 }
 
+-(void)didReceiveMemoryWarning {
 
-- (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+
 }
 
+#pragma mark - UITableViewDataSource
+
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return 0;
+}
+
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return [UITableViewCell new];
+}
 
 @end
