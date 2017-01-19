@@ -33,6 +33,7 @@
 		7B34D0481E307D4E00DF4013 /* MovieModelTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B34D0471E307D4E00DF4013 /* MovieModelTests.m */; };
 		7BBE95671E311109004B54DE /* MoviesPopularInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BBE95661E311109004B54DE /* MoviesPopularInteractor.m */; };
 		7BBE95681E311109004B54DE /* MoviesPopularInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BBE95661E311109004B54DE /* MoviesPopularInteractor.m */; };
+		7BBE956B1E3112A0004B54DE /* MoviesInteractorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BBE956A1E3112A0004B54DE /* MoviesInteractorTests.m */; };
 		C24F7FD99F6A1E0242AE810A /* libPods-PopularMoviesTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 645C25674213263FDA69D423 /* libPods-PopularMoviesTests.a */; };
 /* End PBXBuildFile section */
 
@@ -77,6 +78,7 @@
 		7B34D0471E307D4E00DF4013 /* MovieModelTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieModelTests.m; sourceTree = "<group>"; };
 		7BBE95651E311109004B54DE /* MoviesPopularInteractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MoviesPopularInteractor.h; path = Interactor/MoviesPopularInteractor.h; sourceTree = "<group>"; };
 		7BBE95661E311109004B54DE /* MoviesPopularInteractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MoviesPopularInteractor.m; path = Interactor/MoviesPopularInteractor.m; sourceTree = "<group>"; };
+		7BBE956A1E3112A0004B54DE /* MoviesInteractorTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoviesInteractorTests.m; sourceTree = "<group>"; };
 		846B45888C633131D932E832 /* Pods-PopularMoviesTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PopularMoviesTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PopularMoviesTests/Pods-PopularMoviesTests.release.xcconfig"; sourceTree = "<group>"; };
 		A625A7C3F619E380D08B924E /* Pods-PopularMovies.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PopularMovies.release.xcconfig"; path = "Pods/Target Support Files/Pods-PopularMovies/Pods-PopularMovies.release.xcconfig"; sourceTree = "<group>"; };
 		B7053DA1F02C2960D44405F8 /* Pods-PopularMoviesTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PopularMoviesTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PopularMoviesTests/Pods-PopularMoviesTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -224,6 +226,7 @@
 		7B34D0331E3050D100DF4013 /* PopularMoviesTests */ = {
 			isa = PBXGroup;
 			children = (
+				7BBE95691E311271004B54DE /* Interactor */,
 				7B34D0361E3050D100DF4013 /* Info.plist */,
 				7B34D0461E307D2800DF4013 /* Model */,
 				7B02E7931E308B78006FDE50 /* Presenter */,
@@ -291,6 +294,14 @@
 				7BBE95661E311109004B54DE /* MoviesPopularInteractor.m */,
 			);
 			name = MoviesPopular;
+			sourceTree = "<group>";
+		};
+		7BBE95691E311271004B54DE /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				7BBE956A1E3112A0004B54DE /* MoviesInteractorTests.m */,
+			);
+			name = Interactor;
 			sourceTree = "<group>";
 		};
 		B39D76BCDE3A3F58CC7BBF03 /* Frameworks */ = {
@@ -542,6 +553,7 @@
 				7B02E7A91E309941006FDE50 /* MoviesInteractor.m in Sources */,
 				7B02E7A11E308D9B006FDE50 /* MovieCell.m in Sources */,
 				7B34D0481E307D4E00DF4013 /* MovieModelTests.m in Sources */,
+				7BBE956B1E3112A0004B54DE /* MoviesInteractorTests.m in Sources */,
 				7BBE95681E311109004B54DE /* MoviesPopularInteractor.m in Sources */,
 				7B02E7921E308116006FDE50 /* MoviePresenter.m in Sources */,
 				7B02E79B1E308D5A006FDE50 /* GenericCell.m in Sources */,
