@@ -41,7 +41,17 @@
     return [UITableViewCell new];
 }
 
-#pragma mark - Setup SearchController 
+#pragma mark - UISearchBarDelegate
+
+-(void)searchBar:(UISearchBar *)searchBar selectedScopeButtonIndexDidChange:(NSInteger)selectedScope {
+}
+
+#pragma mark - UISearchResultsUpdating
+
+-(void)updateSearchResultsForSearchController:(UISearchController *)searchController {
+}
+
+#pragma mark - Setup SearchController
 
 -(void)setupSearchController {
     
