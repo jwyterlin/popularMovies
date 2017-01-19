@@ -28,4 +28,14 @@
     return self.movies.count;
 }
 
+#pragma mark - Lazy Instances
+
+-(NSMutableArray<MovieModel *> *)movies {
+    
+    if ( ! _movies )
+        _movies = [NSMutableArray new];
+    return _movies;
+    
+}
+
 @end
