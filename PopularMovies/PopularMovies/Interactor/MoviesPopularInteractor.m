@@ -8,6 +8,23 @@
 
 #import "MoviesPopularInteractor.h"
 
+// Service
+#import "MovieService.h"
+
 @implementation MoviesPopularInteractor
+
+-(void)loadMoviesPopularWithPage:(NSNumber *)page {
+    
+    [[MovieService new] moviesPopularWithPage:page success:^(MovieModel *movie) {
+        
+        // Success
+        
+    } failure:^(BOOL hasNoConnection, NSError *error) {
+        
+        // Failure
+        
+    }];
+    
+}
 
 @end
