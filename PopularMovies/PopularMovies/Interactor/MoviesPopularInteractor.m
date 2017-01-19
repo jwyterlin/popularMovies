@@ -21,9 +21,18 @@
         
     } failure:^(BOOL hasNoConnection, NSError *error) {
         
-        // Failure
+        [self handleError:error];
         
     }];
+    
+}
+
+#pragma mark - HandleErrorDelegate facilities
+
+-(void)handleError:(NSError *)error {
+    
+    if ( self.delegateHandleError )
+        [self.delegateHandleError handleErrorDelegate_handleError:error];
     
 }
 

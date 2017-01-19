@@ -350,7 +350,6 @@
 		7B34D0191E3050D000DF4013 /* PopularMovies */ = {
 			isa = PBXGroup;
 			children = (
-				7B02E7DA1E3186C9006FDE50 /* Protocols */,
 				7B34D0431E30545D00DF4013 /* AppDelegate */,
 				7B02E7C91E317E6D006FDE50 /* Category */,
 				7B34D0441E30546900DF4013 /* Controller */,
@@ -358,6 +357,7 @@
 				7B02E7891E307FE0006FDE50 /* Model */,
 				7B02E7CF1E31806D006FDE50 /* Parser */,
 				7B02E78E1E3080F7006FDE50 /* Presenter */,
+				7B02E7DA1E3186C9006FDE50 /* Protocols */,
 				7B02E7AE1E317A62006FDE50 /* Service */,
 				7B34D0451E30547900DF4013 /* Storyboard */,
 				7B34D01A1E3050D000DF4013 /* Supporting Files */,

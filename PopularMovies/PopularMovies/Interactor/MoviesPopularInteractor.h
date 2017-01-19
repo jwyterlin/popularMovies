@@ -8,6 +8,11 @@
 
 #import "MoviesInteractor.h"
 
+// Protocols
+#import "HandleErrorDelegate.h"
+
 @interface MoviesPopularInteractor : MoviesInteractor
+
+@property(weak,nonatomic) id<HandleErrorDelegate> delegateHandleError;
 
 @end
