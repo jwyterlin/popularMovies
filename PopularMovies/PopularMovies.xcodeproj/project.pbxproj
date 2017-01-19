@@ -13,8 +13,8 @@
 		7B34D0271E3050D000DF4013 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B34D0261E3050D000DF4013 /* Assets.xcassets */; };
 		7B34D02A1E3050D000DF4013 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B34D0281E3050D000DF4013 /* LaunchScreen.storyboard */; };
 		7B34D0351E3050D100DF4013 /* PopularMoviesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B34D0341E3050D100DF4013 /* PopularMoviesTests.m */; };
-		7B34D0411E30545500DF4013 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B34D0401E30545500DF4013 /* ViewController.m */; };
-		7B34D0421E30545500DF4013 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B34D0401E30545500DF4013 /* ViewController.m */; };
+		7B34D0411E30545500DF4013 /* MoviesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B34D0401E30545500DF4013 /* MoviesViewController.m */; };
+		7B34D0421E30545500DF4013 /* MoviesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B34D0401E30545500DF4013 /* MoviesViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,8 +39,8 @@
 		7B34D0301E3050D100DF4013 /* PopularMoviesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PopularMoviesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B34D0341E3050D100DF4013 /* PopularMoviesTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PopularMoviesTests.m; sourceTree = "<group>"; };
 		7B34D0361E3050D100DF4013 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7B34D03F1E30545500DF4013 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViewController.h; path = Controller/ViewController.h; sourceTree = "<group>"; };
-		7B34D0401E30545500DF4013 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ViewController.m; path = Controller/ViewController.m; sourceTree = "<group>"; };
+		7B34D03F1E30545500DF4013 /* MoviesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MoviesViewController.h; path = Controller/MoviesViewController.h; sourceTree = "<group>"; };
+		7B34D0401E30545500DF4013 /* MoviesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MoviesViewController.m; path = Controller/MoviesViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,8 +121,8 @@
 		7B34D0441E30546900DF4013 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				7B34D03F1E30545500DF4013 /* ViewController.h */,
-				7B34D0401E30545500DF4013 /* ViewController.m */,
+				7B34D03F1E30545500DF4013 /* MoviesViewController.h */,
+				7B34D0401E30545500DF4013 /* MoviesViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -241,7 +241,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7B34D01F1E3050D000DF4013 /* AppDelegate.m in Sources */,
-				7B34D0411E30545500DF4013 /* ViewController.m in Sources */,
+				7B34D0411E30545500DF4013 /* MoviesViewController.m in Sources */,
 				7B34D01C1E3050D000DF4013 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -250,7 +250,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7B34D0421E30545500DF4013 /* ViewController.m in Sources */,
+				7B34D0421E30545500DF4013 /* MoviesViewController.m in Sources */,
 				7B34D0351E3050D100DF4013 /* PopularMoviesTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

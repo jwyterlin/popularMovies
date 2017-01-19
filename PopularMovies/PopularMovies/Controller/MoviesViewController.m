@@ -1,18 +1,18 @@
 //
-//  ViewController.m
+//  MoviesViewController.m
 //  PopularMovies
 //
 //  Created by Jhonathan Wyterlin on 18/01/17.
 //  Copyright © 2017 Jhonathan Wyterlin. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "MoviesViewController.h"
 
-@interface ViewController ()
+@interface MoviesViewController ()
 
 @end
 
-@implementation ViewController
+@implementation MoviesViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
