@@ -8,6 +8,12 @@
 
 #import <Foundation/Foundation.h>
 
+@class MovieModel;
+
 @interface MoviesInteractor : NSObject
+
+-(MovieModel *)movieAtIndexPath:(NSIndexPath *)indexPath;
+
+-(NSInteger)numberOfRows;
 
 @end

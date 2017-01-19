@@ -8,6 +8,30 @@
 
 #import "MoviesInteractor.h"
 
+#import <UIKit/UITableView.h>
+
+// Model
+#import "MovieModel.h"
+
+@interface MoviesInteractor()
+
+@property(strong,nonatomic) NSMutableArray<MovieModel *> *movies;
+
+@end
+
 @implementation MoviesInteractor
+
+-(MovieModel *)movieAtIndexPath:(NSIndexPath *)indexPath {
+    
+    if ( self.movies.count > indexPath.row )
+        return self.movies[indexPath.row];
+    
+    return nil;
+    
+}
+
+-(NSInteger)numberOfRows {
+    return self.movies.count;
+}
 
 @end
