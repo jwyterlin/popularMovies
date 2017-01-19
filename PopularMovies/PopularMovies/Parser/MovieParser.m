@@ -11,11 +11,21 @@
 // Model
 #import "MovieModel.h"
 
+// Utils
+#import "Validator.h"
+
 @implementation MovieParser
 
 -(MovieModel *)movieWithJson:(NSDictionary *)json {
     
-    return [MovieModel new];
+    if ( ! [Validator validateObject:json] )
+        return nil;
+    
+    NSString *title = json[@"title"];
+    NSNumber *year = [NSNumber numberWithInteger:[json[@"year"] integerValue]];
+    NSString *overview = json[@"overview"];
+    
+    return [[MovieModel alloc] initWithTitle:title year:year overview:overview picture:nil];
     
 }
 
