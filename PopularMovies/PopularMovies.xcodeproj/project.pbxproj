@@ -23,6 +23,8 @@
 		7B02E7A91E309941006FDE50 /* MoviesInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B02E7A71E309941006FDE50 /* MoviesInteractor.m */; };
 		7B02E7AC1E309FE8006FDE50 /* MoviesSearchedInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B02E7AB1E309FE8006FDE50 /* MoviesSearchedInteractor.m */; };
 		7B02E7AD1E309FE8006FDE50 /* MoviesSearchedInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B02E7AB1E309FE8006FDE50 /* MoviesSearchedInteractor.m */; };
+		7B02E7B11E317A85006FDE50 /* GenericService.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B02E7B01E317A85006FDE50 /* GenericService.m */; };
+		7B02E7B21E317A85006FDE50 /* GenericService.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B02E7B01E317A85006FDE50 /* GenericService.m */; };
 		7B34D01C1E3050D000DF4013 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B34D01B1E3050D000DF4013 /* main.m */; };
 		7B34D01F1E3050D000DF4013 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B34D01E1E3050D000DF4013 /* AppDelegate.m */; };
 		7B34D0251E3050D000DF4013 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B34D0231E3050D000DF4013 /* Main.storyboard */; };
@@ -63,6 +65,8 @@
 		7B02E7A71E309941006FDE50 /* MoviesInteractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MoviesInteractor.m; path = Interactor/MoviesInteractor.m; sourceTree = "<group>"; };
 		7B02E7AA1E309FE8006FDE50 /* MoviesSearchedInteractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MoviesSearchedInteractor.h; path = Interactor/MoviesSearchedInteractor.h; sourceTree = "<group>"; };
 		7B02E7AB1E309FE8006FDE50 /* MoviesSearchedInteractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MoviesSearchedInteractor.m; path = Interactor/MoviesSearchedInteractor.m; sourceTree = "<group>"; };
+		7B02E7AF1E317A85006FDE50 /* GenericService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GenericService.h; path = Service/GenericService.h; sourceTree = "<group>"; };
+		7B02E7B01E317A85006FDE50 /* GenericService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GenericService.m; path = Service/GenericService.m; sourceTree = "<group>"; };
 		7B34D0171E3050D000DF4013 /* PopularMovies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PopularMovies.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B34D01B1E3050D000DF4013 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7B34D01D1E3050D000DF4013 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -178,6 +182,23 @@
 			name = Interactor;
 			sourceTree = "<group>";
 		};
+		7B02E7AE1E317A62006FDE50 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				7B02E7B31E317A8A006FDE50 /* GenericService */,
+			);
+			name = Service;
+			sourceTree = "<group>";
+		};
+		7B02E7B31E317A8A006FDE50 /* GenericService */ = {
+			isa = PBXGroup;
+			children = (
+				7B02E7AF1E317A85006FDE50 /* GenericService.h */,
+				7B02E7B01E317A85006FDE50 /* GenericService.m */,
+			);
+			name = GenericService;
+			sourceTree = "<group>";
+		};
 		7B34D00E1E3050D000DF4013 = {
 			isa = PBXGroup;
 			children = (
@@ -201,6 +222,7 @@
 		7B34D0191E3050D000DF4013 /* PopularMovies */ = {
 			isa = PBXGroup;
 			children = (
+				7B02E7AE1E317A62006FDE50 /* Service */,
 				7B34D0431E30545D00DF4013 /* AppDelegate */,
 				7B34D0441E30546900DF4013 /* Controller */,
 				7B02E7A51E309915006FDE50 /* Interactor */,
@@ -538,6 +560,7 @@
 				7B34D01C1E3050D000DF4013 /* main.m in Sources */,
 				7BBE95671E311109004B54DE /* MoviesPopularInteractor.m in Sources */,
 				7B02E7911E308116006FDE50 /* MoviePresenter.m in Sources */,
+				7B02E7B11E317A85006FDE50 /* GenericService.m in Sources */,
 				7B02E79A1E308D5A006FDE50 /* GenericCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -555,6 +578,7 @@
 				7B34D0481E307D4E00DF4013 /* MovieModelTests.m in Sources */,
 				7BBE956B1E3112A0004B54DE /* MoviesInteractorTests.m in Sources */,
 				7BBE95681E311109004B54DE /* MoviesPopularInteractor.m in Sources */,
+				7B02E7B21E317A85006FDE50 /* GenericService.m in Sources */,
 				7B02E7921E308116006FDE50 /* MoviePresenter.m in Sources */,
 				7B02E79B1E308D5A006FDE50 /* GenericCell.m in Sources */,
 			);
