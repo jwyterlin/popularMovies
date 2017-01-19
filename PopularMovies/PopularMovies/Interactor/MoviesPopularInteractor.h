@@ -1,15 +1,13 @@
 //
-//  MoviesSearchedInteractor.m
+//  MoviesPopularInteractor.h
 //  PopularMovies
 //
 //  Created by Jhonathan Wyterlin on 19/01/17.
 //  Copyright © 2017 Jhonathan Wyterlin. All rights reserved.
 //
 
-#import "MoviesSearchedInteractor.h"
+#import "MoviesInteractor.h"
 
-@implementation MoviesSearchedInteractor
-
-
+@interface MoviesPopularInteractor : MoviesInteractor
 
 @end
