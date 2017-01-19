@@ -8,10 +8,25 @@
 
 #import "MoviesViewController.h"
 
+// Interactor
+#import "MoviesInteractor.h"
+
+// Model
+#import "MovieModel.h"
+
+// Presenter
+#import "MoviePresenter.h"
+
+// View - UITableViewCell
+#import "MovieCell.h"
+
 @interface MoviesViewController()<UITableViewDataSource,UISearchBarDelegate,UISearchResultsUpdating>
 
 @property(weak,nonatomic) IBOutlet UITableView *tableView;
 @property(strong,nonatomic) UISearchController *searchController;
+
+// Interactor
+@property(strong,nonatomic) MoviesInteractor *moviesInteractor;
 
 @end
 
@@ -34,11 +49,16 @@
 #pragma mark - UITableViewDataSource
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 0;
+    return [self.moviesInteractor numberOfRows];
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return [UITableViewCell new];
+    
+    MovieModel *movieModel = [self.moviesInteractor movieAtIndexPath:indexPath];
+    MoviePresenter *moviePresenter = [[MoviePresenter alloc] initWithMovie:movieModel];
+    
+    return [MovieCell cellAtIndexPath:indexPath tableView:tableView moviePresenter:moviePresenter];
+    
 }
 
 #pragma mark - UISearchBarDelegate
@@ -61,6 +81,20 @@
     self.searchController.dimsBackgroundDuringPresentation = NO;
     
     self.tableView.tableHeaderView = self.searchController.searchBar;
+    
+}
+
+#pragma mark - Lazy Instances
+
+-(MoviesInteractor *)moviesInteractor {
+    
+    if ( ! _moviesInteractor ) {
+        
+        _moviesInteractor = [MoviesInteractor new];
+        
+    }
+    
+    return _moviesInteractor;
     
 }
 
