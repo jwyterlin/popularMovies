@@ -48,6 +48,7 @@
     [super viewDidLoad];
     
     [self setupTableView];
+    [self setupSearchController];
     
 }
 
@@ -133,12 +134,9 @@
 
 -(void)setupSearchController {
     
-    self.searchController.searchResultsUpdater = self;
-    self.searchController.searchBar.delegate = self;
     self.definesPresentationContext = YES;
-    self.searchController.dimsBackgroundDuringPresentation = NO;
-    
     self.tableView.tableHeaderView = self.searchController.searchBar;
+    [self.tableView reloadData];
     
 }
 
@@ -157,6 +155,22 @@
 }
 
 #pragma mark - Lazy Instances
+
+-(UISearchController *)searchController {
+    
+    if ( ! _searchController ) {
+        
+        _searchController = [[UISearchController alloc] initWithSearchResultsController:nil];
+        _searchController.searchResultsUpdater = self;
+        _searchController.searchBar.delegate = self;
+        _searchController.dimsBackgroundDuringPresentation = NO;
+        [_searchController.searchBar sizeToFit];
+        
+    }
+    
+    return _searchController;
+    
+}
 
 -(MoviesPopularInteractor *)moviesPopularInteractor {
     

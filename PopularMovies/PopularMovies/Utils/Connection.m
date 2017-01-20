@@ -73,7 +73,7 @@
             failure( NO, error );
     };
     
-    NSLog( @"url: %@%@",[[NetAPIClient sharedClient] baseURL], url );
+    // NSLog( @"url: %@%@",[[NetAPIClient sharedClient] baseURL], url );
     
     if ( method == RequestMethodGet ) {
 
