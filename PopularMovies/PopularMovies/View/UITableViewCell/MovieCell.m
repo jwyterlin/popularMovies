@@ -60,6 +60,8 @@
 
 -(void)configureMoviePictureWithMoviePresenter:(MoviePresenter *)moviePresenter {
     
+    self.moviePicture.image = nil;
+    
     if ( moviePresenter.pictureImage ) {
         
         self.moviePicture.image = moviePresenter.pictureImage;

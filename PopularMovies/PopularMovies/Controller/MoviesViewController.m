@@ -19,6 +19,7 @@
 #import "MoviePresenter.h"
 
 // View - UITableViewCell
+#import "LoadingMoreCell.h"
 #import "MovieCell.h"
 
 // Utils
@@ -75,6 +76,20 @@
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    NSInteger numberOfRows = [self.moviesPopularInteractor numberOfRows];
+    
+    BOOL needsLoadMore = [self.moviesPopularInteractor needsLoadMore];
+    
+    if ( indexPath.row == numberOfRows - 1 && needsLoadMore ) {
+        
+        return [LoadingMoreCell cellWithTableView:tableView text:@"Loading more..." completion:^{
+                                           
+            [self.moviesPopularInteractor loadMoviesPopular];
+                                           
+        }];
+        
+    }
     
     MovieModel *movieModel = [self.moviesPopularInteractor movieAtIndexPath:indexPath];
     MoviePresenter *moviePresenter = [[MoviePresenter alloc] initWithMovie:movieModel];

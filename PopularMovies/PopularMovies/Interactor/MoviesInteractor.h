@@ -18,6 +18,8 @@
 @interface MoviesInteractor : NSObject
 
 @property(strong,nonatomic) NSMutableArray<MovieModel *> *movies;
+@property(nonatomic) BOOL needsLoadMore;
+@property(nonatomic,strong) NSNumber *page;
 
 @property(weak,nonatomic) id<HandleErrorDelegate> delegateHandleError;
 @property(weak,nonatomic) id<ListElementsDelegate> delegateListElements;
@@ -26,6 +28,8 @@
 -(MovieModel *)movieAtIndexPath:(NSIndexPath *)indexPath;
 
 -(NSInteger)numberOfRows;
+
+-(void)didLoadMovies:(NSArray<MovieModel *> *)movies page:(NSNumber *)page;
 
 // HandleErrorDelegate facilities
 -(void)handleError:(NSError *)error;

@@ -15,6 +15,22 @@
 
 @implementation MoviesInteractor
 
+#pragma mark - Lifecycle
+
+-(instancetype)init {
+    
+    self = [super init];
+    
+    if ( self ) {
+        self.page = @1;
+    }
+    
+    return self;
+    
+}
+
+#pragma mark - Public methods
+
 -(MovieModel *)movieAtIndexPath:(NSIndexPath *)indexPath {
     
     if ( self.movies.count > indexPath.row )
@@ -26,6 +42,24 @@
 
 -(NSInteger)numberOfRows {
     return self.movies.count;
+}
+
+-(void)didLoadMovies:(NSArray<MovieModel *> *)movies page:(NSNumber *)page {
+    
+    if ( movies.count > 0 ) {
+        
+        [self.movies addObjectsFromArray:movies];
+        self.page = [NSNumber numberWithInteger: [page integerValue] + 1 ];
+        self.needsLoadMore = YES;
+        
+    } else {
+        
+        self.needsLoadMore = NO;
+        
+    }
+    
+    [self reloadList];
+    
 }
 
 #pragma mark - HandleErrorDelegate facilities

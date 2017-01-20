@@ -20,15 +20,11 @@
     
     [self setImageWithURLRequest:request placeholderImage:nil success:^(NSURLRequest *request, NSHTTPURLResponse *response, UIImage *image) {
         
-        NSLog(@"Downloaded Image: %@", urlString );
-        
         if ( completion ) {
             completion( image );
         }
         
     } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error) {
-        
-        NSLog(@"Failed Downloading Image: %@", urlString );
         
     }];
     

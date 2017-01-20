@@ -20,23 +20,13 @@
 
 -(void)loadMoviesPopular {
     
-    [self loadMoviesPopularWithPage:@1];
-    
-}
-
-#pragma mark - Private methods
-
--(void)loadMoviesPopularWithPage:(NSNumber *)page {
-    
     [self startLoading];
     
-    [[MovieService new] moviesPopularWithPage:page success:^(NSArray<MovieModel *> *movies) {
+    [[MovieService new] moviesPopularWithPage:self.page success:^(NSArray<MovieModel *> *movies) {
         
         [self stopLoading];
         
-        [self.movies addObjectsFromArray:movies];
-        
-        [self reloadList];
+        [self didLoadMovies:movies page:self.page];
         
     } failure:^(BOOL hasNoConnection, NSError *error) {
         

@@ -47,6 +47,10 @@
 		7B02E7EC1E31C5C5006FDE50 /* NSDate+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B02E7EA1E31C5C5006FDE50 /* NSDate+Helper.m */; };
 		7B02E7F01E31D484006FDE50 /* UIImageView+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B02E7EF1E31D484006FDE50 /* UIImageView+Helper.m */; };
 		7B02E7F11E31D484006FDE50 /* UIImageView+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B02E7EF1E31D484006FDE50 /* UIImageView+Helper.m */; };
+		7B02E7F51E31EAA1006FDE50 /* LoadingMoreCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B02E7F41E31EAA1006FDE50 /* LoadingMoreCell.m */; };
+		7B02E7F61E31EAA1006FDE50 /* LoadingMoreCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B02E7F41E31EAA1006FDE50 /* LoadingMoreCell.m */; };
+		7B02E7FA1E31EC31006FDE50 /* UIView+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B02E7F91E31EC31006FDE50 /* UIView+Helper.m */; };
+		7B02E7FB1E31EC31006FDE50 /* UIView+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B02E7F91E31EC31006FDE50 /* UIView+Helper.m */; };
 		7B34D01C1E3050D000DF4013 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B34D01B1E3050D000DF4013 /* main.m */; };
 		7B34D01F1E3050D000DF4013 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B34D01E1E3050D000DF4013 /* AppDelegate.m */; };
 		7B34D0251E3050D000DF4013 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B34D0231E3050D000DF4013 /* Main.storyboard */; };
@@ -114,6 +118,10 @@
 		7B02E7EA1E31C5C5006FDE50 /* NSDate+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSDate+Helper.m"; path = "Category/NSDate+Helper.m"; sourceTree = "<group>"; };
 		7B02E7EE1E31D484006FDE50 /* UIImageView+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImageView+Helper.h"; path = "Category/UIImageView+Helper.h"; sourceTree = "<group>"; };
 		7B02E7EF1E31D484006FDE50 /* UIImageView+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImageView+Helper.m"; path = "Category/UIImageView+Helper.m"; sourceTree = "<group>"; };
+		7B02E7F31E31EAA1006FDE50 /* LoadingMoreCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoadingMoreCell.h; path = View/UITableViewCell/LoadingMoreCell.h; sourceTree = "<group>"; };
+		7B02E7F41E31EAA1006FDE50 /* LoadingMoreCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoadingMoreCell.m; path = View/UITableViewCell/LoadingMoreCell.m; sourceTree = "<group>"; };
+		7B02E7F81E31EC31006FDE50 /* UIView+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+Helper.h"; path = "Category/UIView+Helper.h"; sourceTree = "<group>"; };
+		7B02E7F91E31EC31006FDE50 /* UIView+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+Helper.m"; path = "Category/UIView+Helper.m"; sourceTree = "<group>"; };
 		7B34D0171E3050D000DF4013 /* PopularMovies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PopularMovies.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B34D01B1E3050D000DF4013 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7B34D01D1E3050D000DF4013 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -194,6 +202,7 @@
 		7B02E7971E308D18006FDE50 /* UITableViewCell */ = {
 			isa = PBXGroup;
 			children = (
+				7B02E7F21E31EA81006FDE50 /* LoadingMoreCell */,
 				7B02E79C1E308D5F006FDE50 /* GenericCell */,
 				7B02E79D1E308D87006FDE50 /* MovieCell */,
 			);
@@ -302,6 +311,7 @@
 				7B02E7CE1E317F35006FDE50 /* Reachability */,
 				7B02E7ED1E31D467006FDE50 /* UIImageView */,
 				7B02E7E31E31AC95006FDE50 /* UITableView */,
+				7B02E7F71E31EBE5006FDE50 /* UIView */,
 			);
 			name = Category;
 			sourceTree = "<group>";
@@ -385,6 +395,24 @@
 				7B02E7EF1E31D484006FDE50 /* UIImageView+Helper.m */,
 			);
 			name = UIImageView;
+			sourceTree = "<group>";
+		};
+		7B02E7F21E31EA81006FDE50 /* LoadingMoreCell */ = {
+			isa = PBXGroup;
+			children = (
+				7B02E7F31E31EAA1006FDE50 /* LoadingMoreCell.h */,
+				7B02E7F41E31EAA1006FDE50 /* LoadingMoreCell.m */,
+			);
+			name = LoadingMoreCell;
+			sourceTree = "<group>";
+		};
+		7B02E7F71E31EBE5006FDE50 /* UIView */ = {
+			isa = PBXGroup;
+			children = (
+				7B02E7F81E31EC31006FDE50 /* UIView+Helper.h */,
+				7B02E7F91E31EC31006FDE50 /* UIView+Helper.m */,
+			);
+			name = UIView;
 			sourceTree = "<group>";
 		};
 		7B34D00E1E3050D000DF4013 = {
@@ -753,9 +781,11 @@
 				7B34D01C1E3050D000DF4013 /* main.m in Sources */,
 				7BBE95671E311109004B54DE /* MoviesPopularInteractor.m in Sources */,
 				7B02E7911E308116006FDE50 /* MoviePresenter.m in Sources */,
+				7B02E7F51E31EAA1006FDE50 /* LoadingMoreCell.m in Sources */,
 				7B02E7BD1E317BD0006FDE50 /* Connection.m in Sources */,
 				7B02E7D81E318238006FDE50 /* Validator.m in Sources */,
 				7B02E7F01E31D484006FDE50 /* UIImageView+Helper.m in Sources */,
+				7B02E7FA1E31EC31006FDE50 /* UIView+Helper.m in Sources */,
 				7B02E7EB1E31C5C5006FDE50 /* NSDate+Helper.m in Sources */,
 				7B02E7B11E317A85006FDE50 /* GenericService.m in Sources */,
 				7B02E7D31E31808E006FDE50 /* MovieParser.m in Sources */,
@@ -777,6 +807,7 @@
 				7B02E7CD1E317E8E006FDE50 /* Reachability+Helper.m in Sources */,
 				7B02E7D41E31808E006FDE50 /* MovieParser.m in Sources */,
 				7B02E78D1E307FFB006FDE50 /* MovieModel.m in Sources */,
+				7B02E7F61E31EAA1006FDE50 /* LoadingMoreCell.m in Sources */,
 				7B02E7951E308B8E006FDE50 /* MoviePresenterTests.m in Sources */,
 				7B02E7AD1E309FE8006FDE50 /* MoviesSearchedInteractor.m in Sources */,
 				7B02E7E21E319248006FDE50 /* Indicator.m in Sources */,
@@ -785,6 +816,7 @@
 				7B34D0421E30545500DF4013 /* MoviesViewController.m in Sources */,
 				7B02E7A91E309941006FDE50 /* MoviesInteractor.m in Sources */,
 				7B02E7A11E308D9B006FDE50 /* MovieCell.m in Sources */,
+				7B02E7FB1E31EC31006FDE50 /* UIView+Helper.m in Sources */,
 				7B34D0481E307D4E00DF4013 /* MovieModelTests.m in Sources */,
 				7B02E7E71E31ACB1006FDE50 /* UITableView+Helper.m in Sources */,
 				7B02E7EC1E31C5C5006FDE50 /* NSDate+Helper.m in Sources */,
