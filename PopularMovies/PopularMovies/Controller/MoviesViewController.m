@@ -21,6 +21,9 @@
 // View - UITableViewCell
 #import "MovieCell.h"
 
+// Utils
+#import "Indicator.h"
+
 @interface MoviesViewController()<UITableViewDataSource,UISearchBarDelegate,UISearchResultsUpdating,LoadingDelegate,ListElementsDelegate,HandleErrorDelegate>
 
 @property(weak,nonatomic) IBOutlet UITableView *tableView;
@@ -78,25 +81,22 @@
 #pragma mark - LoadingDelegate
 
 -(void)loadingDelegate_startLoading {
-    
+    [[Indicator shared] showIndicatorWithViewController:self];
 }
 
 -(void)loadingDelegate_stopLoading {
-    
+    [[Indicator shared] stopIndicatorInViewController:self];
 }
 
 #pragma mark - ListElementsDelegate
 
 -(void)listElementsDelegate_reloadList {
-    
+    [self.tableView reloadData];
 }
 
 #pragma mark - HandleErrorDelegate
 
 -(void)handleErrorDelegate_handleError:(nonnull NSError *)error {
-    
-    
-    
 }
 
 #pragma mark - Setup SearchController
