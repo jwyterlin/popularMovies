@@ -35,4 +35,14 @@ it (@"should be title nil. ", ^{
     
 });
 
+it (@"should be picture nil. ", ^{
+    
+    MovieModel *movieModel = [[MovieModel alloc] initWithTitle:title releaseDate:releaseDate overview:overview posterPath:posterPath];
+    
+    [movieModel updatePicture:nil];
+    
+    expect( movieModel.picture ).to.equal(nil);
+    
+});
+
 SpecEnd
