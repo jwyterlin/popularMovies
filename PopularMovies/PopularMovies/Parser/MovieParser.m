@@ -22,10 +22,11 @@
         return nil;
     
     NSString *title = json[@"title"];
-    NSNumber *year = [NSNumber numberWithInteger:[json[@"year"] integerValue]];
+    NSNumber *year = [NSNumber numberWithInteger:[json[@"release_date"] integerValue]];
     NSString *overview = json[@"overview"];
+    NSString *posterPath = json[@"poster_path"];
     
-    return [[MovieModel alloc] initWithTitle:title year:year overview:overview picture:nil];
+    return [[MovieModel alloc] initWithTitle:title year:year overview:overview posterPath:posterPath];
     
 }
 

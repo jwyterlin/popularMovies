@@ -10,7 +10,7 @@
 
 @implementation MovieModel
 
--(instancetype)initWithTitle:(NSString *)title year:(NSNumber *)year overview:(NSString *)overview picture:(NSData *)picture {
+-(instancetype)initWithTitle:(NSString *)title year:(NSNumber *)year overview:(NSString *)overview posterPath:(NSString *)posterPath {
     
     self = [super init];
     
@@ -19,7 +19,7 @@
         _title = title;
         _year = year;
         _overview = overview;
-        _picture = picture;
+        _posterPath = posterPath;
         
     }
     

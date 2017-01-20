@@ -290,8 +290,8 @@
 		7B02E7C91E317E6D006FDE50 /* Category */ = {
 			isa = PBXGroup;
 			children = (
-				7B02E7E31E31AC95006FDE50 /* UITableView */,
 				7B02E7CE1E317F35006FDE50 /* Reachability */,
+				7B02E7E31E31AC95006FDE50 /* UITableView */,
 			);
 			name = Category;
 			sourceTree = "<group>";
