@@ -17,4 +17,6 @@
 @property(weak,nonatomic) id<HandleErrorDelegate> delegateHandleError;
 @property(weak,nonatomic) id<ListElementsDelegate> delegateListElements;
 
+-(void)loadMoviesPopularWithPage:(NSNumber *)page;
+
 @end
