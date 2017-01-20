@@ -74,13 +74,9 @@
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
-    NSInteger numberOfRows;
+    MoviesInteractor *moviesInteractor = [self currentMoviesInteractor];
     
-    if ( [self searchIsActive] ) {
-        numberOfRows = [self.moviesSearchedInteractor numberOfRows];
-    } else {
-        numberOfRows = [self.moviesPopularInteractor numberOfRows];
-    }
+    NSInteger numberOfRows = [moviesInteractor numberOfRows];
     
     return numberOfRows;
     
@@ -88,16 +84,10 @@
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    NSInteger numberOfRows;
-    BOOL needsLoadMore;
+    MoviesInteractor *moviesInteractor = [self currentMoviesInteractor];
     
-    if ( [self searchIsActive] ) {
-        numberOfRows = [self.moviesSearchedInteractor numberOfRows];
-        needsLoadMore = [self.moviesSearchedInteractor needsLoadMore];
-    } else {
-        numberOfRows = [self.moviesPopularInteractor numberOfRows];
-        needsLoadMore = [self.moviesPopularInteractor needsLoadMore];
-    }
+    NSInteger numberOfRows = [moviesInteractor numberOfRows];
+    BOOL needsLoadMore = [moviesInteractor needsLoadMore];
     
     if ( indexPath.row == numberOfRows - 1 && needsLoadMore ) {
         
@@ -113,14 +103,7 @@
         
     }
     
-    MovieModel *movieModel;
-    
-    if ( [self searchIsActive] ) {
-        movieModel = [self.moviesSearchedInteractor movieAtIndexPath:indexPath];
-    } else {
-        movieModel = [self.moviesPopularInteractor movieAtIndexPath:indexPath];
-    }
-
+    MovieModel *movieModel = [moviesInteractor movieAtIndexPath:indexPath];
     MoviePresenter *moviePresenter = [[MoviePresenter alloc] initWithMovie:movieModel];
     
     return [MovieCell cellAtIndexPath:indexPath tableView:tableView moviePresenter:moviePresenter];
@@ -224,6 +207,19 @@
     BOOL searchIsActive = ( self.searchController.active && ! [self.searchController.searchBar.text isEqualToString:@""] );
     
     return searchIsActive;
+    
+}
+
+-(MoviesInteractor *)currentMoviesInteractor {
+    
+    MoviesInteractor *moviesInteractor;
+    
+    if ( [self searchIsActive] )
+        moviesInteractor = self.moviesSearchedInteractor;
+    else
+        moviesInteractor = self.moviesPopularInteractor;
+    
+    return moviesInteractor;
     
 }
 
