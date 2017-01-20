@@ -12,6 +12,9 @@
 
 +(NSInteger)getYearFromDate:(NSDate *)date {
     
+    if ( ! date )
+        return 0;
+    
     NSCalendar *calendar = [NSCalendar currentCalendar];
     NSInteger year = [calendar component:NSCalendarUnitYear fromDate:date];
     

@@ -63,7 +63,11 @@
     
     NSInteger year = [NSDate getYearFromDate:self.movie.releaseDate];
     
-    _yearText = [NSString stringWithFormat:@"%li",(long)year];
+    if ( year == 0 ) {
+        _yearText = @"N/A";
+    } else {
+        _yearText = [NSString stringWithFormat:@"%li",(long)year];
+    }
     
     return _yearText;
     

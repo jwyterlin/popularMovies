@@ -72,7 +72,13 @@
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
-    NSInteger numberOfRows = [self.moviesPopularInteractor numberOfRows];
+    NSInteger numberOfRows;
+    
+    if ( [self searchIsActive] ) {
+        numberOfRows = [self.moviesSearchedInteractor numberOfRows];
+    } else {
+        numberOfRows = [self.moviesPopularInteractor numberOfRows];
+    }
     
     return numberOfRows;
     
@@ -80,21 +86,39 @@
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    NSInteger numberOfRows = [self.moviesPopularInteractor numberOfRows];
+    NSInteger numberOfRows;
+    BOOL needsLoadMore;
     
-    BOOL needsLoadMore = [self.moviesPopularInteractor needsLoadMore];
+    if ( [self searchIsActive] ) {
+        numberOfRows = [self.moviesSearchedInteractor numberOfRows];
+        needsLoadMore = [self.moviesSearchedInteractor needsLoadMore];
+    } else {
+        numberOfRows = [self.moviesPopularInteractor numberOfRows];
+        needsLoadMore = [self.moviesPopularInteractor needsLoadMore];
+    }
     
     if ( indexPath.row == numberOfRows - 1 && needsLoadMore ) {
         
         return [LoadingMoreCell cellWithTableView:tableView text:@"Loading more..." completion:^{
-                                           
-            [self.moviesPopularInteractor loadMoviesPopular];
+            
+            if ( [self searchIsActive] ) {
+                [self.moviesSearchedInteractor searchMoviesByTerm:self.searchController.searchBar.text];
+            } else {
+                [self.moviesPopularInteractor loadMoviesPopular];
+            }
                                            
         }];
         
     }
     
-    MovieModel *movieModel = [self.moviesPopularInteractor movieAtIndexPath:indexPath];
+    MovieModel *movieModel;
+    
+    if ( [self searchIsActive] ) {
+        movieModel = [self.moviesSearchedInteractor movieAtIndexPath:indexPath];
+    } else {
+        movieModel = [self.moviesPopularInteractor movieAtIndexPath:indexPath];
+    }
+
     MoviePresenter *moviePresenter = [[MoviePresenter alloc] initWithMovie:movieModel];
     
     return [MovieCell cellAtIndexPath:indexPath tableView:tableView moviePresenter:moviePresenter];
@@ -191,6 +215,16 @@
     
 }
 
+#pragma mark - Search Helper methods
+
+-(BOOL)searchIsActive {
+    
+    BOOL searchIsActive = ( self.searchController.active && ! [self.searchController.searchBar.text isEqualToString:@""] );
+    
+    return searchIsActive;
+    
+}
+
 #pragma mark - Lazy Instances
 
 -(UISearchController *)searchController {
@@ -229,6 +263,9 @@
     if ( ! _moviesSearchedInteractor ) {
         
         _moviesSearchedInteractor = [MoviesSearchedInteractor new];
+        _moviesSearchedInteractor.delegateLoading = self;
+        _moviesSearchedInteractor.delegateListElements = self;
+        _moviesSearchedInteractor.delegateHandleError = self;
         
     }
     
