@@ -28,6 +28,40 @@
     return self.movies.count;
 }
 
+#pragma mark - HandleErrorDelegate facilities
+
+-(void)handleError:(NSError *)error {
+    
+    if ( self.delegateHandleError )
+        [self.delegateHandleError handleErrorDelegate_handleError:error];
+    
+}
+
+#pragma mark - ListElementsDelegate facilities
+
+-(void)reloadList {
+    
+    if ( self.delegateListElements )
+        [self.delegateListElements listElementsDelegate_reloadList];
+    
+}
+
+#pragma mark - LoadingDelegate facilities
+
+-(void)startLoading {
+    
+    if ( self.delegateLoading )
+        [self.delegateLoading loadingDelegate_startLoading];
+    
+}
+
+-(void)stopLoading {
+    
+    if ( self.delegateLoading )
+        [self.delegateLoading loadingDelegate_stopLoading];
+    
+}
+
 #pragma mark - Lazy Instances
 
 -(NSMutableArray<MovieModel *> *)movies {

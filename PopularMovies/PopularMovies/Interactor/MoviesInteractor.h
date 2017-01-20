@@ -8,14 +8,33 @@
 
 #import <Foundation/Foundation.h>
 
+// Protocols
+#import "HandleErrorDelegate.h"
+#import "ListElementsDelegate.h"
+#import "LoadingDelegate.h"
+
 @class MovieModel;
 
 @interface MoviesInteractor : NSObject
 
 @property(strong,nonatomic) NSMutableArray<MovieModel *> *movies;
 
+@property(weak,nonatomic) id<HandleErrorDelegate> delegateHandleError;
+@property(weak,nonatomic) id<ListElementsDelegate> delegateListElements;
+@property(weak,nonatomic) id<LoadingDelegate> delegateLoading;
+
 -(MovieModel *)movieAtIndexPath:(NSIndexPath *)indexPath;
 
 -(NSInteger)numberOfRows;
+
+// HandleErrorDelegate facilities
+-(void)handleError:(NSError *)error;
+
+// ListElementsDelegate facilities
+-(void)reloadList;
+
+// LoadingDelegate facilities
+-(void)startLoading;
+-(void)stopLoading;
 
 @end
