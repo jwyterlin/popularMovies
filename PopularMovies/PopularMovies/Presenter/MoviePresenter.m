@@ -23,6 +23,7 @@
 @property(nonatomic,retain) NSString *overviewText;
 @property(nonatomic,retain) UIImage *pictureImage;
 @property(nonatomic,retain) NSString *titleYearText;
+@property(nonatomic,retain) NSString *posterPathText;
 
 @end
 
@@ -98,6 +99,28 @@
     _titleYearText = [NSString stringWithFormat:@"%@ (%@)", self.titleText, self.yearText];
     
     return _titleYearText;
+    
+}
+
+-(NSString *)posterPathText {
+    
+    if ( _posterPathText )
+        return _posterPathText;
+    
+    _posterPathText = self.movie.posterPath;
+    
+    return _posterPathText;
+    
+}
+
+-(void)updatePictureImage:(UIImage *)image {
+    
+    _pictureImage = image;
+    
+    NSData *picture = UIImageJPEGRepresentation(image, 1.0);
+    
+    [self.movie updatePicture:picture];
+    
     
 }
 

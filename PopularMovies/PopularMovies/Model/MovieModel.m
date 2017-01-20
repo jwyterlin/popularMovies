@@ -27,4 +27,10 @@
     
 }
 
+-(void)updatePicture:(NSData *)image {
+    
+    _picture = image;
+    
+}
+
 @end

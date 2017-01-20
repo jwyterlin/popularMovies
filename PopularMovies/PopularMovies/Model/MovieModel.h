@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIImage.h>
 
 @interface MovieModel : NSObject
 
@@ -17,5 +18,7 @@
 @property(nonatomic,readonly) NSString *overview;
 @property(nonatomic,readonly) NSString *posterPath;
 @property(nonatomic,readonly) NSData *picture;
+
+-(void)updatePicture:(NSData *)image;
 
 @end

@@ -11,6 +11,9 @@
 // Presenter
 #import "MoviePresenter.h"
 
+// Category
+#import "UIImageView+Helper.h"
+
 @interface MovieCell()
 
 @property(weak,nonatomic) IBOutlet UIImageView *moviePicture;
@@ -24,7 +27,7 @@
 #pragma mark - Overriding super methods
 
 +(CGFloat)heightForCell {
-    return 137.0f;
+    return 195.0f;
 }
 
 +(NSString *)identifier {
@@ -47,11 +50,34 @@
 
 +(void)configureCell:(MovieCell *)cell moviePresenter:(MoviePresenter *)moviePresenter {
     
-    cell.moviePicture.image = moviePresenter.pictureImage;
+    [cell configureMoviePictureWithMoviePresenter:moviePresenter];
     
     cell.movieTitleYear.text = moviePresenter.titleYearText;
     
     cell.movieOverview.text = moviePresenter.overviewText;
+    
+}
+
+-(void)configureMoviePictureWithMoviePresenter:(MoviePresenter *)moviePresenter {
+    
+    if ( moviePresenter.pictureImage ) {
+        
+        self.moviePicture.image = moviePresenter.pictureImage;
+        
+    } else {
+        
+        __weak MovieCell *weakCell = self;
+        __weak MoviePresenter *weakMoviePresenter = moviePresenter;
+        
+        [self.moviePicture downloadImageWithUrl:moviePresenter.posterPathText completion:^(UIImage *image) {
+            
+            weakCell.moviePicture.image = image;
+            [weakMoviePresenter updatePictureImage:image];
+            [weakCell setNeedsLayout];
+            
+        }];
+        
+    }
     
 }
 

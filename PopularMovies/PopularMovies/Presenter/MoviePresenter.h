@@ -20,5 +20,8 @@
 -(NSString *)overviewText;
 -(UIImage *)pictureImage;
 -(NSString *)titleYearText;
+-(NSString *)posterPathText;
+
+-(void)updatePictureImage:(UIImage *)image;
 
 @end
