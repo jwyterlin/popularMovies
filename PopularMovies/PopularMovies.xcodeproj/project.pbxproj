@@ -53,6 +53,7 @@
 		7B02E7FB1E31EC31006FDE50 /* UIView+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B02E7F91E31EC31006FDE50 /* UIView+Helper.m */; };
 		7B02E7FE1E3219BB006FDE50 /* GenericCellTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B02E7FD1E3219BB006FDE50 /* GenericCellTests.m */; };
 		7B02E8001E321AE0006FDE50 /* LoadingMoreCellTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B02E7FF1E321AE0006FDE50 /* LoadingMoreCellTests.m */; };
+		7B02E8031E321D31006FDE50 /* MovieParserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B02E8021E321D31006FDE50 /* MovieParserTests.m */; };
 		7B34D01C1E3050D000DF4013 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B34D01B1E3050D000DF4013 /* main.m */; };
 		7B34D01F1E3050D000DF4013 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B34D01E1E3050D000DF4013 /* AppDelegate.m */; };
 		7B34D0251E3050D000DF4013 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B34D0231E3050D000DF4013 /* Main.storyboard */; };
@@ -126,6 +127,7 @@
 		7B02E7F91E31EC31006FDE50 /* UIView+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+Helper.m"; path = "Category/UIView+Helper.m"; sourceTree = "<group>"; };
 		7B02E7FD1E3219BB006FDE50 /* GenericCellTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GenericCellTests.m; sourceTree = "<group>"; };
 		7B02E7FF1E321AE0006FDE50 /* LoadingMoreCellTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoadingMoreCellTests.m; sourceTree = "<group>"; };
+		7B02E8021E321D31006FDE50 /* MovieParserTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieParserTests.m; sourceTree = "<group>"; };
 		7B34D0171E3050D000DF4013 /* PopularMovies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PopularMovies.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B34D01B1E3050D000DF4013 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7B34D01D1E3050D000DF4013 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -428,6 +430,14 @@
 			name = View;
 			sourceTree = "<group>";
 		};
+		7B02E8011E321D18006FDE50 /* Parser */ = {
+			isa = PBXGroup;
+			children = (
+				7B02E8021E321D31006FDE50 /* MovieParserTests.m */,
+			);
+			name = Parser;
+			sourceTree = "<group>";
+		};
 		7B34D00E1E3050D000DF4013 = {
 			isa = PBXGroup;
 			children = (
@@ -481,6 +491,7 @@
 		7B34D0331E3050D100DF4013 /* PopularMoviesTests */ = {
 			isa = PBXGroup;
 			children = (
+				7B02E8011E321D18006FDE50 /* Parser */,
 				7B34D0361E3050D100DF4013 /* Info.plist */,
 				7BBE95691E311271004B54DE /* Interactor */,
 				7B34D0461E307D2800DF4013 /* Model */,
@@ -821,6 +832,7 @@
 				7B02E7CD1E317E8E006FDE50 /* Reachability+Helper.m in Sources */,
 				7B02E7D41E31808E006FDE50 /* MovieParser.m in Sources */,
 				7B02E78D1E307FFB006FDE50 /* MovieModel.m in Sources */,
+				7B02E8031E321D31006FDE50 /* MovieParserTests.m in Sources */,
 				7B02E7F61E31EAA1006FDE50 /* LoadingMoreCell.m in Sources */,
 				7B02E7951E308B8E006FDE50 /* MoviePresenterTests.m in Sources */,
 				7B02E7AD1E309FE8006FDE50 /* MoviesSearchedInteractor.m in Sources */,
