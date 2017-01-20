@@ -32,4 +32,8 @@
     return @"movie/popular";
 }
 
++(NSString *)WS_SEARCH_MOVIE {
+    return @"search/movie";
+}
+
 @end

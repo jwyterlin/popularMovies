@@ -29,4 +29,10 @@
     
 }
 
+-(void)cancelAllOperations {
+    
+    [[NSOperationQueue mainQueue] cancelAllOperations];
+    
+}
+
 @end

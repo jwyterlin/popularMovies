@@ -17,5 +17,6 @@
 +(NSString *)BASE_IMAGE_URL;
 
 +(NSString *)WS_MOVIE_POPULAR;
++(NSString *)WS_SEARCH_MOVIE;
 
 @end

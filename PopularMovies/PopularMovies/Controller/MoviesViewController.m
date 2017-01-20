@@ -37,6 +37,8 @@
 @property(strong,nonatomic) MoviesPopularInteractor *moviesPopularInteractor;
 @property(strong,nonatomic) MoviesSearchedInteractor *moviesSearchedInteractor;
 
+@property(nonatomic,strong) NSTimer *timer;
+
 @end
 
 @implementation MoviesViewController
@@ -104,9 +106,44 @@
 -(void)searchBar:(UISearchBar *)searchBar selectedScopeButtonIndexDidChange:(NSInteger)selectedScope {
 }
 
+-(void)searchBarCancelButtonClicked:(UISearchBar *)searchBar {
+    
+    // User touched the Cancel button
+    [self.moviesSearchedInteractor cancelSearch];
+    
+}
+
 #pragma mark - UISearchResultsUpdating
 
 -(void)updateSearchResultsForSearchController:(UISearchController *)searchController {
+    
+    NSString *keyword = searchController.searchBar.text;
+    
+    [self willSearchKeyword:keyword];
+    
+}
+
+#pragma mark - Timer to Search
+
+-(void)willSearchKeyword:(NSString *)keyword {
+    
+    // It schedules to begin the search 1 second after user stops typing
+    if ( keyword ) {
+        if ( ! [keyword isEqualToString:@""] ) {
+            // Cancel old search
+            [self.moviesSearchedInteractor cancelSearch];
+            [self.timer invalidate];
+            self.timer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(scheduleSearch:) userInfo:nil repeats:NO];
+        }
+    }
+    
+}
+
+-(void)scheduleSearch:(NSTimer *)timer {
+    
+    // Search by term
+    [self.moviesSearchedInteractor searchMoviesByTerm:self.searchController.searchBar.text];
+    
 }
 
 #pragma mark - LoadingDelegate

@@ -10,4 +10,8 @@
 
 @interface MoviesSearchedInteractor : MoviesInteractor
 
+-(void)searchMoviesByTerm:(NSString *)term;
+
+-(void)cancelSearch;
+
 @end

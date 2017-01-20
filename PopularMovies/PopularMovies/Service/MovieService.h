@@ -16,4 +16,9 @@
                      success:(void(^)(NSArray<MovieModel *> *movies))success
                      failure:(void(^)(BOOL hasNoConnection, NSError *error))failure;
 
+-(void)searchMoviesByTerm:(NSString *)term
+                     page:(NSNumber *)page
+                  success:(void(^)(NSArray<MovieModel *> *movies))success
+                  failure:(void(^)(BOOL hasNoConnection, NSError *error))failure;
+
 @end
