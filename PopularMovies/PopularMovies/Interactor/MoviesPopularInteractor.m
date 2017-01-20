@@ -16,6 +16,16 @@
 
 @implementation MoviesPopularInteractor
 
+#pragma mark - Public methods
+
+-(void)loadMoviesPopular {
+    
+    [self loadMoviesPopularWithPage:@1];
+    
+}
+
+#pragma mark - Private methods
+
 -(void)loadMoviesPopularWithPage:(NSNumber *)page {
     
     [self startLoading];

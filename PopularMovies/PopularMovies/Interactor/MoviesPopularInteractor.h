@@ -10,6 +10,6 @@
 
 @interface MoviesPopularInteractor : MoviesInteractor
 
--(void)loadMoviesPopularWithPage:(NSNumber *)page;
+-(void)loadMoviesPopular;
 
 @end

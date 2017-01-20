@@ -21,7 +21,7 @@
 // View - UITableViewCell
 #import "MovieCell.h"
 
-@interface MoviesViewController()<UITableViewDataSource,UISearchBarDelegate,UISearchResultsUpdating>
+@interface MoviesViewController()<UITableViewDataSource,UISearchBarDelegate,UISearchResultsUpdating,LoadingDelegate,ListElementsDelegate,HandleErrorDelegate>
 
 @property(weak,nonatomic) IBOutlet UITableView *tableView;
 @property(strong,nonatomic) UISearchController *searchController;
@@ -39,6 +39,8 @@
 -(void)viewDidLoad {
     
     [super viewDidLoad];
+    
+    [self.moviesPopularInteractor loadMoviesPopular];
     
 }
 
@@ -73,6 +75,30 @@
 -(void)updateSearchResultsForSearchController:(UISearchController *)searchController {
 }
 
+#pragma mark - LoadingDelegate
+
+-(void)loadingDelegate_startLoading {
+    
+}
+
+-(void)loadingDelegate_stopLoading {
+    
+}
+
+#pragma mark - ListElementsDelegate
+
+-(void)listElementsDelegate_reloadList {
+    
+}
+
+#pragma mark - HandleErrorDelegate
+
+-(void)handleErrorDelegate_handleError:(nonnull NSError *)error {
+    
+    
+    
+}
+
 #pragma mark - Setup SearchController
 
 -(void)setupSearchController {
@@ -93,6 +119,9 @@
     if ( ! _moviesPopularInteractor ) {
         
         _moviesPopularInteractor = [MoviesPopularInteractor new];
+        _moviesPopularInteractor.delegateLoading = self;
+        _moviesPopularInteractor.delegateListElements = self;
+        _moviesPopularInteractor.delegateHandleError = self;
         
     }
     
