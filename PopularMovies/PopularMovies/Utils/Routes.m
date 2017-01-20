@@ -12,14 +12,18 @@
 
 +(NSString *)API_TOKEN {
     
-    return @"";
+    return @"bcdddf36ef7e3fb5c83ef439baf0f9b3";
     
 }
 
 +(NSString *)BASE_URL_API {
     
-    return @"";
+    return @"https://api.themoviedb.org/3";
     
+}
+
++(NSString *)WS_MOVIE_POPULAR {
+    return @"/movie/popular";
 }
 
 @end

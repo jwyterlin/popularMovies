@@ -14,4 +14,6 @@
 
 +(NSString *)BASE_URL_API;
 
++(NSString *)WS_MOVIE_POPULAR;
+
 @end
