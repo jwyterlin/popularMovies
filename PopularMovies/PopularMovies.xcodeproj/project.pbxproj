@@ -97,6 +97,7 @@
 		7B02E7D71E318238006FDE50 /* Validator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Validator.m; path = Utils/Validator.m; sourceTree = "<group>"; };
 		7B02E7DB1E3186E1006FDE50 /* HandleErrorDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HandleErrorDelegate.h; path = Protocols/HandleErrorDelegate.h; sourceTree = "<group>"; };
 		7B02E7DC1E318C69006FDE50 /* ListElementsDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ListElementsDelegate.h; path = Protocols/ListElementsDelegate.h; sourceTree = "<group>"; };
+		7B02E7DD1E318F26006FDE50 /* LoadingDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoadingDelegate.h; path = Protocols/LoadingDelegate.h; sourceTree = "<group>"; };
 		7B34D0171E3050D000DF4013 /* PopularMovies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PopularMovies.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B34D01B1E3050D000DF4013 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7B34D01D1E3050D000DF4013 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -325,6 +326,7 @@
 			children = (
 				7B02E7DB1E3186E1006FDE50 /* HandleErrorDelegate.h */,
 				7B02E7DC1E318C69006FDE50 /* ListElementsDelegate.h */,
+				7B02E7DD1E318F26006FDE50 /* LoadingDelegate.h */,
 			);
 			name = Protocols;
 			sourceTree = "<group>";
