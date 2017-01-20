@@ -49,6 +49,8 @@
     
     [super viewDidLoad];
     
+    self.navigationItem.title = @"Popular Movies";
+    
     [self setupTableView];
     [self setupSearchController];
     
