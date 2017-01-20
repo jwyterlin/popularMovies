@@ -13,7 +13,7 @@
 @interface MovieService : GenericService
 
 -(void)moviesPopularWithPage:(NSNumber *)page
-                     success:(void(^)(MovieModel *movie))success
+                     success:(void(^)(NSArray<MovieModel *> *movies))success
                      failure:(void(^)(BOOL hasNoConnection, NSError *error))failure;
 
 @end

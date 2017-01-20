@@ -29,4 +29,25 @@
     
 }
 
+-(NSArray<MovieModel *> *)moviesWithJsonArray:(NSArray *)jsonArray {
+    
+    if ( ! [Validator validateObject:jsonArray] )
+        return nil;
+    
+    NSMutableArray *mutableArray = [NSMutableArray new];
+    
+    for ( NSDictionary *json in jsonArray ) {
+        
+        MovieModel *movieModel = [self movieWithJson:json];
+        
+        if ( movieModel ) {
+            [mutableArray addObject:movieModel];
+        }
+        
+    }
+    
+    return mutableArray;
+    
+}
+
 @end

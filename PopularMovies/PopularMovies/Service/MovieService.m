@@ -17,7 +17,7 @@
 @implementation MovieService
 
 -(void)moviesPopularWithPage:(NSNumber *)page
-                     success:(void(^)(MovieModel *movie))success
+                     success:(void(^)(NSArray<MovieModel *> *movies))success
                      failure:(void(^)(BOOL hasNoConnection, NSError *error))failure {
     
     NSString *url = @"";
@@ -26,7 +26,7 @@
     
     [[Connection new] connectWithMethod:RequestMethodGet url:url parameters:parameters success:^(id responseData) {
         
-        NSDictionary *result = (NSDictionary *)responseData;
+        NSArray *result = (NSArray *)responseData;
         
         if ( result.count == 0 ) {
             if ( success ) {
@@ -35,10 +35,10 @@
             return;
         }
         
-        MovieModel *movie = [[MovieParser new] movieWithJson:result];
+        NSArray<MovieModel *> *movies = [[MovieParser new] moviesWithJsonArray:result];
         
         if ( success )
-            success( movie );
+            success( movies );
         
     } failure:^(BOOL hasNoConnection, NSError *error) {
         

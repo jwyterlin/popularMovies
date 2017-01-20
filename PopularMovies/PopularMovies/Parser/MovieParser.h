@@ -14,4 +14,6 @@
 
 -(MovieModel *)movieWithJson:(NSDictionary *)json;
 
+-(NSArray<MovieModel *> *)moviesWithJsonArray:(NSArray *)jsonArray;
+
 @end

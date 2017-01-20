@@ -11,11 +11,14 @@
 // Service
 #import "MovieService.h"
 
+// Model
+#import "MovieModel.h"
+
 @implementation MoviesPopularInteractor
 
 -(void)loadMoviesPopularWithPage:(NSNumber *)page {
     
-    [[MovieService new] moviesPopularWithPage:page success:^(MovieModel *movie) {
+    [[MovieService new] moviesPopularWithPage:page success:^(NSArray<MovieModel *> *movies) {
         
         // Success
         
