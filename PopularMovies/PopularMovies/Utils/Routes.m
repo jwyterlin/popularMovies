@@ -22,8 +22,14 @@
     
 }
 
++(NSString *)BASE_IMAGE_URL {
+    
+    return @"https://image.tmdb.org/t/p/w500";
+    
+}
+
 +(NSString *)WS_MOVIE_POPULAR {
-    return @"/movie/popular";
+    return @"movie/popular";
 }
 
 @end

@@ -10,10 +10,10 @@
 
 @interface MovieModel : NSObject
 
--(instancetype)initWithTitle:(NSString *)title year:(NSNumber *)year overview:(NSString *)overview posterPath:(NSString *)posterPath;
+-(instancetype)initWithTitle:(NSString *)title releaseDate:(NSDate *)releaseDate overview:(NSString *)overview posterPath:(NSString *)posterPath;
 
 @property(nonatomic,readonly) NSString *title;
-@property(nonatomic,readonly) NSNumber *year;
+@property(nonatomic,readonly) NSDate *releaseDate;
 @property(nonatomic,readonly) NSString *overview;
 @property(nonatomic,readonly) NSString *posterPath;
 @property(nonatomic,readonly) NSData *picture;

@@ -10,6 +10,7 @@
 
 // Utils
 #import "Connection.h"
+#import "Routes.h"
 
 @interface GenericService : NSObject
 

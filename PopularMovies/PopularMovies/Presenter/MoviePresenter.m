@@ -11,6 +11,9 @@
 // Model
 #import "MovieModel.h"
 
+// Category
+#import "NSDate+Helper.h"
+
 @interface MoviePresenter()
 
 @property(nonatomic,readonly) MovieModel *movie;
@@ -57,7 +60,9 @@
     if ( _yearText )
         return _yearText;
     
-    _yearText = [self.movie.year stringValue];
+    NSInteger year = [NSDate getYearFromDate:self.movie.releaseDate];
+    
+    _yearText = [NSString stringWithFormat:@"%li",(long)year];
     
     return _yearText;
     

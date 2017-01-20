@@ -10,14 +10,14 @@
 
 @implementation MovieModel
 
--(instancetype)initWithTitle:(NSString *)title year:(NSNumber *)year overview:(NSString *)overview posterPath:(NSString *)posterPath {
+-(instancetype)initWithTitle:(NSString *)title releaseDate:(NSDate *)releaseDate overview:(NSString *)overview posterPath:(NSString *)posterPath {
     
     self = [super init];
     
     if ( self ) {
         
         _title = title;
-        _year = year;
+        _releaseDate = releaseDate;
         _overview = overview;
         _posterPath = posterPath;
         

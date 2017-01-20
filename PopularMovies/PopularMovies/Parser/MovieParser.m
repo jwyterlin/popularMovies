@@ -12,7 +12,11 @@
 #import "MovieModel.h"
 
 // Utils
+#import "Routes.h"
 #import "Validator.h"
+
+// Category
+#import "NSDate+Helper.h"
 
 @implementation MovieParser
 
@@ -21,12 +25,19 @@
     if ( ! [Validator validateObject:json] )
         return nil;
     
+    // title
     NSString *title = json[@"title"];
-    NSNumber *year = [NSNumber numberWithInteger:[json[@"release_date"] integerValue]];
-    NSString *overview = json[@"overview"];
-    NSString *posterPath = json[@"poster_path"];
     
-    return [[MovieModel alloc] initWithTitle:title year:year overview:overview posterPath:posterPath];
+    // releaseDate
+    NSDate *releaseDate = [NSDate dateFromDefaultString:json[@"release_date"]];
+    
+    // overview
+    NSString *overview = json[@"overview"];
+    
+    // poster_path
+    NSString *posterPath = [NSString stringWithFormat:@"%@%@",[Routes BASE_IMAGE_URL],json[@"poster_path"]];
+    
+    return [[MovieModel alloc] initWithTitle:title releaseDate:releaseDate overview:overview posterPath:posterPath];
     
 }
 
