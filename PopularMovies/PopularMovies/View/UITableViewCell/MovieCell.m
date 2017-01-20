@@ -27,13 +27,15 @@
     return 137.0f;
 }
 
++(NSString *)identifier {
+    return NSStringFromClass( [MovieCell class] );
+}
+
 #pragma mark - Public methods
 
 +(MovieCell *)cellAtIndexPath:(NSIndexPath *)indexPath tableView:(UITableView *)tableView moviePresenter:(MoviePresenter *)moviePresenter {
     
-    NSString *identifier = NSStringFromClass([MovieCell class]);
-    
-    MovieCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier forIndexPath:indexPath];
+    MovieCell *cell = [tableView dequeueReusableCellWithIdentifier:self.identifier forIndexPath:indexPath];
     
     [self configureCell:cell moviePresenter:moviePresenter];
     

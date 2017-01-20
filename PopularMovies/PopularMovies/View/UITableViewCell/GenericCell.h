@@ -11,5 +11,6 @@
 @interface GenericCell : UITableViewCell
 
 +(CGFloat)heightForCell;
++(NSString *)identifier;
 
 @end

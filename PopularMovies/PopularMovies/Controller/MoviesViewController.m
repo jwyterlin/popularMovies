@@ -24,6 +24,9 @@
 // Utils
 #import "Indicator.h"
 
+// Category
+#import "UITableView+Helper.h"
+
 @interface MoviesViewController()<UITableViewDataSource,UISearchBarDelegate,UISearchResultsUpdating,LoadingDelegate,ListElementsDelegate,HandleErrorDelegate>
 
 @property(weak,nonatomic) IBOutlet UITableView *tableView;
@@ -43,6 +46,14 @@
     
     [super viewDidLoad];
     
+    [self setupTableView];
+    
+}
+
+-(void)viewDidAppear:(BOOL)animated {
+    
+    [super viewDidAppear:animated];
+    
     [self.moviesPopularInteractor loadMoviesPopular];
     
 }
@@ -56,7 +67,11 @@
 #pragma mark - UITableViewDataSource
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [self.moviesPopularInteractor numberOfRows];
+    
+    NSInteger numberOfRows = [self.moviesPopularInteractor numberOfRows];
+    
+    return numberOfRows;
+    
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -109,6 +124,20 @@
     self.searchController.dimsBackgroundDuringPresentation = NO;
     
     self.tableView.tableHeaderView = self.searchController.searchBar;
+    
+}
+
+#pragma mark - Setup tableView
+
+-(void)setupTableView {
+    
+    self.tableView.dataSource = self;
+    
+    self.tableView.rowHeight = UITableViewAutomaticDimension;
+    self.tableView.estimatedRowHeight = [MovieCell heightForCell];
+    
+    NSString *identifier = [MovieCell identifier];
+    [self.tableView registerNibForCellReuseIdentifier:identifier];
     
 }
 

@@ -14,4 +14,8 @@
     return 44.0f;
 }
 
++(NSString *)identifier {
+    return NSStringFromClass( [GenericCell class] );
+}
+
 @end

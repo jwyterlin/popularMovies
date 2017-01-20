@@ -41,6 +41,8 @@
 		7B02E7D91E318238006FDE50 /* Validator.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B02E7D71E318238006FDE50 /* Validator.m */; };
 		7B02E7E11E319248006FDE50 /* Indicator.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B02E7E01E319248006FDE50 /* Indicator.m */; };
 		7B02E7E21E319248006FDE50 /* Indicator.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B02E7E01E319248006FDE50 /* Indicator.m */; };
+		7B02E7E61E31ACB1006FDE50 /* UITableView+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B02E7E51E31ACB1006FDE50 /* UITableView+Helper.m */; };
+		7B02E7E71E31ACB1006FDE50 /* UITableView+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B02E7E51E31ACB1006FDE50 /* UITableView+Helper.m */; };
 		7B34D01C1E3050D000DF4013 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B34D01B1E3050D000DF4013 /* main.m */; };
 		7B34D01F1E3050D000DF4013 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B34D01E1E3050D000DF4013 /* AppDelegate.m */; };
 		7B34D0251E3050D000DF4013 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B34D0231E3050D000DF4013 /* Main.storyboard */; };
@@ -102,6 +104,8 @@
 		7B02E7DD1E318F26006FDE50 /* LoadingDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoadingDelegate.h; path = Protocols/LoadingDelegate.h; sourceTree = "<group>"; };
 		7B02E7DF1E319248006FDE50 /* Indicator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Indicator.h; path = Utils/Indicator.h; sourceTree = "<group>"; };
 		7B02E7E01E319248006FDE50 /* Indicator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Indicator.m; path = Utils/Indicator.m; sourceTree = "<group>"; };
+		7B02E7E41E31ACB1006FDE50 /* UITableView+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UITableView+Helper.h"; path = "Category/UITableView+Helper.h"; sourceTree = "<group>"; };
+		7B02E7E51E31ACB1006FDE50 /* UITableView+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UITableView+Helper.m"; path = "Category/UITableView+Helper.m"; sourceTree = "<group>"; };
 		7B34D0171E3050D000DF4013 /* PopularMovies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PopularMovies.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B34D01B1E3050D000DF4013 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7B34D01D1E3050D000DF4013 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -286,6 +290,7 @@
 		7B02E7C91E317E6D006FDE50 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				7B02E7E31E31AC95006FDE50 /* UITableView */,
 				7B02E7CE1E317F35006FDE50 /* Reachability */,
 			);
 			name = Category;
@@ -343,6 +348,15 @@
 				7B02E7E01E319248006FDE50 /* Indicator.m */,
 			);
 			name = Indicator;
+			sourceTree = "<group>";
+		};
+		7B02E7E31E31AC95006FDE50 /* UITableView */ = {
+			isa = PBXGroup;
+			children = (
+				7B02E7E41E31ACB1006FDE50 /* UITableView+Helper.h */,
+				7B02E7E51E31ACB1006FDE50 /* UITableView+Helper.m */,
+			);
+			name = UITableView;
 			sourceTree = "<group>";
 		};
 		7B34D00E1E3050D000DF4013 = {
@@ -704,6 +718,7 @@
 				7B02E78C1E307FFB006FDE50 /* MovieModel.m in Sources */,
 				7B34D01F1E3050D000DF4013 /* AppDelegate.m in Sources */,
 				7B02E7AC1E309FE8006FDE50 /* MoviesSearchedInteractor.m in Sources */,
+				7B02E7E61E31ACB1006FDE50 /* UITableView+Helper.m in Sources */,
 				7B34D0411E30545500DF4013 /* MoviesViewController.m in Sources */,
 				7B02E7A81E309941006FDE50 /* MoviesInteractor.m in Sources */,
 				7B02E7A01E308D9B006FDE50 /* MovieCell.m in Sources */,
@@ -740,6 +755,7 @@
 				7B02E7A91E309941006FDE50 /* MoviesInteractor.m in Sources */,
 				7B02E7A11E308D9B006FDE50 /* MovieCell.m in Sources */,
 				7B34D0481E307D4E00DF4013 /* MovieModelTests.m in Sources */,
+				7B02E7E71E31ACB1006FDE50 /* UITableView+Helper.m in Sources */,
 				7BBE956B1E3112A0004B54DE /* MoviesInteractorTests.m in Sources */,
 				7BBE95681E311109004B54DE /* MoviesPopularInteractor.m in Sources */,
 				7B02E7C31E317C5F006FDE50 /* NetAPIClient.m in Sources */,
