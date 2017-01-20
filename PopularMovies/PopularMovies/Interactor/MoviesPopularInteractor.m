@@ -20,7 +20,9 @@
     
     [[MovieService new] moviesPopularWithPage:page success:^(NSArray<MovieModel *> *movies) {
         
-        // Success
+        [self.movies addObjectsFromArray:movies];
+        
+        [self reloadList];
         
     } failure:^(BOOL hasNoConnection, NSError *error) {
         
@@ -36,6 +38,15 @@
     
     if ( self.delegateHandleError )
         [self.delegateHandleError handleErrorDelegate_handleError:error];
+    
+}
+
+#pragma mark - ListElementsDelegate facilities
+
+-(void)reloadList {
+    
+    if ( self.delegateListElements )
+        [self.delegateListElements listElementsDelegate_reloadList];
     
 }
 
