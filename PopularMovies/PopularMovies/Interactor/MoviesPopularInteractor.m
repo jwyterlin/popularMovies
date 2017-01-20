@@ -18,13 +18,19 @@
 
 -(void)loadMoviesPopularWithPage:(NSNumber *)page {
     
+    [self startLoading];
+    
     [[MovieService new] moviesPopularWithPage:page success:^(NSArray<MovieModel *> *movies) {
+        
+        [self stopLoading];
         
         [self.movies addObjectsFromArray:movies];
         
         [self reloadList];
         
     } failure:^(BOOL hasNoConnection, NSError *error) {
+        
+        [self stopLoading];
         
         [self handleError:error];
         
@@ -47,6 +53,22 @@
     
     if ( self.delegateListElements )
         [self.delegateListElements listElementsDelegate_reloadList];
+    
+}
+
+#pragma mark - LoadingDelegate facilities
+
+-(void)startLoading {
+    
+    if ( self.delegateLoading )
+        [self.delegateLoading loadingDelegate_startLoading];
+    
+}
+
+-(void)stopLoading {
+    
+    if ( self.delegateLoading )
+        [self.delegateLoading loadingDelegate_stopLoading];
     
 }
 
