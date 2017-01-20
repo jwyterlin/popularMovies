@@ -7,7 +7,6 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <UIKit/UIImage.h>
 
 @interface MovieModel : NSObject
 
