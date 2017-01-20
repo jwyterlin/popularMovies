@@ -16,6 +16,8 @@
 
 @implementation MovieService
 
+#pragma mark - Public methods
+
 -(void)moviesPopularWithPage:(NSNumber *)page
                      success:(void(^)(NSArray<MovieModel *> *movies))success
                      failure:(void(^)(BOOL hasNoConnection, NSError *error))failure {
@@ -29,32 +31,7 @@
     
     [[Connection new] connectWithMethod:RequestMethodGet url:url parameters:parameters success:^(id responseData) {
         
-        NSDictionary *result = (NSDictionary *)responseData;
-        
-        if ( result.count == 0 ) {
-            if ( success ) {
-                success( nil );
-            }
-            return;
-        }
-        
-        if ( result[@"results"] ) {
-        
-            NSArray *results = result[@"results"];
-            
-            NSArray<MovieModel *> *movies = [[MovieParser new] moviesWithJsonArray:results];
-            
-            if ( success )
-                success( movies );
-            
-            return;
-            
-        }
-        
-        if ( success ) {
-            success( nil );
-        }
-        return;
+        [self successWithResultMoviesList:responseData success:success];
         
     } failure:^(BOOL hasNoConnection, NSError *error) {
         
@@ -74,8 +51,6 @@
     
     term = [term stringByAddingPercentEncodingWithAllowedCharacters:[NSMutableCharacterSet alphanumericCharacterSet]];
     
-    term = [term  stringByReplacingOccurrencesOfString:@"%20" withString:@"+"];
-    
     NSDictionary *parameters = @{
                                  @"api_key":[Routes API_TOKEN],
                                  @"query":term,
@@ -84,32 +59,7 @@
     
     [[Connection new] connectWithMethod:RequestMethodGet url:url parameters:parameters success:^(id responseData) {
         
-        NSDictionary *result = (NSDictionary *)responseData;
-        
-        if ( result.count == 0 ) {
-            if ( success ) {
-                success( nil );
-            }
-            return;
-        }
-        
-        if ( result[@"results"] ) {
-            
-            NSArray *results = result[@"results"];
-            
-            NSArray<MovieModel *> *movies = [[MovieParser new] moviesWithJsonArray:results];
-            
-            if ( success )
-                success( movies );
-            
-            return;
-            
-        }
-        
-        if ( success ) {
-            success( nil );
-        }
-        return;
+        [self successWithResultMoviesList:responseData success:success];
         
     } failure:^(BOOL hasNoConnection, NSError *error) {
         
@@ -117,6 +67,39 @@
             failure( hasNoConnection, error );
         
     }];
+    
+}
+
+#pragma mark - Private methods
+
+-(void)successWithResultMoviesList:(id)responseData success:(void(^)(NSArray<MovieModel *> *movies))success {
+    
+    NSDictionary *result = (NSDictionary *)responseData;
+    
+    if ( result.count == 0 ) {
+        if ( success ) {
+            success( nil );
+        }
+        return;
+    }
+    
+    if ( result[@"results"] ) {
+        
+        NSArray *results = result[@"results"];
+        
+        NSArray<MovieModel *> *movies = [[MovieParser new] moviesWithJsonArray:results];
+        
+        if ( success )
+            success( movies );
+        
+        return;
+        
+    }
+    
+    if ( success ) {
+        success( nil );
+    }
+    return;
     
 }
 
