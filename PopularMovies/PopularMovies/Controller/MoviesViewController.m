@@ -28,7 +28,7 @@
 // Category
 #import "UITableView+Helper.h"
 
-@interface MoviesViewController()<UITableViewDataSource,UISearchBarDelegate,UISearchResultsUpdating,LoadingDelegate,ListElementsDelegate,HandleErrorDelegate>
+@interface MoviesViewController()<UITableViewDataSource,UITableViewDelegate,UISearchBarDelegate,UISearchResultsUpdating,LoadingDelegate,ListElementsDelegate,HandleErrorDelegate>
 
 @property(weak,nonatomic) IBOutlet UITableView *tableView;
 @property(strong,nonatomic) UISearchController *searchController;
@@ -110,10 +110,13 @@
     
 }
 
-#pragma mark - UISearchBarDelegate
+#pragma mark - UIScrollViewDelegate
 
--(void)searchBar:(UISearchBar *)searchBar selectedScopeButtonIndexDidChange:(NSInteger)selectedScope {
+- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
+    [self.searchController.searchBar resignFirstResponder];
 }
+
+#pragma mark - UISearchBarDelegate
 
 -(void)searchBarCancelButtonClicked:(UISearchBar *)searchBar {
     
@@ -191,7 +194,7 @@
 -(void)setupTableView {
     
     self.tableView.dataSource = self;
-    
+    self.tableView.delegate = self;
     self.tableView.rowHeight = UITableViewAutomaticDimension;
     self.tableView.estimatedRowHeight = [MovieCell heightForCell];
     
