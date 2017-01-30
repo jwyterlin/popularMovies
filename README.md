@@ -32,3 +32,9 @@ $ git clone https://github.com/jwyterlin/popularMovies.git
 $ open PopularMovies.xcworkspace
 ```
 - Choose a simulator or connect an iOS device to your computer and run the application with `⌘ + R` command
+
+### Preview:
+
+#### iPhone 5 Portrait:
+
+![Portrait](https://github.com/jwyterlin/popularMovies/blob/master/Screenshot/iPhone-5-Portrait.png)
