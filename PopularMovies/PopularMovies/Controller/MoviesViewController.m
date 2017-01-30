@@ -153,6 +153,9 @@
 
 -(void)scheduleSearch:(NSTimer *)timer {
     
+    // Clear list before search a new term
+    [self.moviesSearchedInteractor clearList];
+    
     // Search by term
     [self.moviesSearchedInteractor searchMoviesByTerm:self.searchController.searchBar.text];
     

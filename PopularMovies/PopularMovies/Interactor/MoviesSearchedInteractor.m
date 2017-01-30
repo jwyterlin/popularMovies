@@ -42,7 +42,17 @@
     
     [self stopLoading];
     
+    self.page = @1;
+    
     [[NetAPIClient sharedClient] cancelAllOperations];
+    
+}
+
+-(void)clearList {
+ 
+    [self.movies removeAllObjects];
+    
+    [self reloadList];
     
 }
 

@@ -14,4 +14,6 @@
 
 -(void)cancelSearch;
 
+-(void)clearList;
+
 @end
