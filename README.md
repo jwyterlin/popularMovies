@@ -35,6 +35,6 @@ $ open PopularMovies.xcworkspace
 
 ### Preview:
 
-#### iPhone 7 Portrait:
+#### iPhone 5 Portrait:
 
-![Portrait](https://github.com/jwyterlin/popularMovies/blob/master/Screenshot/iPhone-7-Portrait.png)
+![Portrait](https://github.com/jwyterlin/popularMovies/blob/master/Screenshot/iPhone-5-Portrait.png)
