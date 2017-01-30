@@ -21,7 +21,7 @@ Tested in simulators and on iPhone 5. Platforms >= 10.2
 - [Specta](https://github.com/specta/specta)
 - [Expecta](https://github.com/specta/expecta)
 
-Configuration:
+### Configuration:
 
 - Clone the project to your local directory
 ```
