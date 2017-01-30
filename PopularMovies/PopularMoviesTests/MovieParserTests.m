@@ -41,7 +41,7 @@ it (@"should have movie valid. ", ^{
     
     MovieModel *movieModel = [movieParser movieWithJson:json];
     
-    expect( movieModel ).to.beNil;
+    expect( movieModel ).toNot.beNil;
     
 });
 
